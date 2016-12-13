@@ -11,9 +11,10 @@
 
 @interface SPKDataStore : NSObject
 
-// 作为接口属性,给其他类调用,以完成数据的保存
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
-
 + (instancetype)shareStore;
+
+#pragma mark - 接口方法
+
+
 
 @end
