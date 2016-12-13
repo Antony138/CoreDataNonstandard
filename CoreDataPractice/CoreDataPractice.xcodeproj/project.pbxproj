@@ -15,7 +15,13 @@
 		F49115731DFF86B00098561E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49115711DFF86B00098561E /* LaunchScreen.storyboard */; };
 		F491157E1DFF86B00098561E /* CoreDataPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F491157D1DFF86B00098561E /* CoreDataPracticeTests.m */; };
 		F49115891DFF86B00098561E /* CoreDataPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F49115881DFF86B00098561E /* CoreDataPracticeUITests.m */; };
-		F49115971DFF86F80098561E /* MoveBand.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F49115961DFF86F80098561E /* MoveBand.xcdatamodel */; };
+		F491159A1DFF92780098561E /* MoveBand.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F49115981DFF92780098561E /* MoveBand.xcdatamodeld */; };
+		F49115A71DFF95800098561E /* SPKAchievement+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F491159C1DFF95800098561E /* SPKAchievement+CoreDataClass.m */; };
+		F49115A81DFF95800098561E /* SPKAchievement+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F491159E1DFF95800098561E /* SPKAchievement+CoreDataProperties.m */; };
+		F49115A91DFF95800098561E /* SPKUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F49115A01DFF95800098561E /* SPKUser+CoreDataClass.m */; };
+		F49115AA1DFF95800098561E /* SPKUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F49115A21DFF95800098561E /* SPKUser+CoreDataProperties.m */; };
+		F49115AB1DFF95800098561E /* SPKHistoryDataPacket+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F49115A41DFF95800098561E /* SPKHistoryDataPacket+CoreDataClass.m */; };
+		F49115AC1DFF95800098561E /* SPKHistoryDataPacket+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F49115A61DFF95800098561E /* SPKHistoryDataPacket+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +58,19 @@
 		F49115841DFF86B00098561E /* CoreDataPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49115881DFF86B00098561E /* CoreDataPracticeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataPracticeUITests.m; sourceTree = "<group>"; };
 		F491158A1DFF86B00098561E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F49115961DFF86F80098561E /* MoveBand.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoveBand.xcdatamodel; sourceTree = "<group>"; };
+		F49115991DFF92780098561E /* MoveBand.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoveBand.xcdatamodel; sourceTree = "<group>"; };
+		F491159B1DFF95800098561E /* SPKAchievement+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPKAchievement+CoreDataClass.h"; sourceTree = "<group>"; };
+		F491159C1DFF95800098561E /* SPKAchievement+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKAchievement+CoreDataClass.m"; sourceTree = "<group>"; };
+		F491159D1DFF95800098561E /* SPKAchievement+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPKAchievement+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F491159E1DFF95800098561E /* SPKAchievement+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKAchievement+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F491159F1DFF95800098561E /* SPKUser+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPKUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		F49115A01DFF95800098561E /* SPKUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		F49115A11DFF95800098561E /* SPKUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPKUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F49115A21DFF95800098561E /* SPKUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F49115A31DFF95800098561E /* SPKHistoryDataPacket+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPKHistoryDataPacket+CoreDataClass.h"; sourceTree = "<group>"; };
+		F49115A41DFF95800098561E /* SPKHistoryDataPacket+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKHistoryDataPacket+CoreDataClass.m"; sourceTree = "<group>"; };
+		F49115A51DFF95800098561E /* SPKHistoryDataPacket+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPKHistoryDataPacket+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F49115A61DFF95800098561E /* SPKHistoryDataPacket+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKHistoryDataPacket+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +121,7 @@
 		F49115621DFF86B00098561E /* CoreDataPractice */ = {
 			isa = PBXGroup;
 			children = (
-				F49115961DFF86F80098561E /* MoveBand.xcdatamodel */,
+				F49115AD1DFF95890098561E /* CoreData */,
 				F49115661DFF86B00098561E /* AppDelegate.h */,
 				F49115671DFF86B00098561E /* AppDelegate.m */,
 				F49115691DFF86B00098561E /* ViewController.h */,
@@ -141,6 +159,26 @@
 				F491158A1DFF86B00098561E /* Info.plist */,
 			);
 			path = CoreDataPracticeUITests;
+			sourceTree = "<group>";
+		};
+		F49115AD1DFF95890098561E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F491159B1DFF95800098561E /* SPKAchievement+CoreDataClass.h */,
+				F491159C1DFF95800098561E /* SPKAchievement+CoreDataClass.m */,
+				F491159D1DFF95800098561E /* SPKAchievement+CoreDataProperties.h */,
+				F491159E1DFF95800098561E /* SPKAchievement+CoreDataProperties.m */,
+				F491159F1DFF95800098561E /* SPKUser+CoreDataClass.h */,
+				F49115A01DFF95800098561E /* SPKUser+CoreDataClass.m */,
+				F49115A11DFF95800098561E /* SPKUser+CoreDataProperties.h */,
+				F49115A21DFF95800098561E /* SPKUser+CoreDataProperties.m */,
+				F49115A31DFF95800098561E /* SPKHistoryDataPacket+CoreDataClass.h */,
+				F49115A41DFF95800098561E /* SPKHistoryDataPacket+CoreDataClass.m */,
+				F49115A51DFF95800098561E /* SPKHistoryDataPacket+CoreDataProperties.h */,
+				F49115A61DFF95800098561E /* SPKHistoryDataPacket+CoreDataProperties.m */,
+				F49115981DFF92780098561E /* MoveBand.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,10 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F49115971DFF86F80098561E /* MoveBand.xcdatamodel in Sources */,
+				F49115A71DFF95800098561E /* SPKAchievement+CoreDataClass.m in Sources */,
 				F491156B1DFF86B00098561E /* ViewController.m in Sources */,
+				F49115A81DFF95800098561E /* SPKAchievement+CoreDataProperties.m in Sources */,
+				F49115AC1DFF95800098561E /* SPKHistoryDataPacket+CoreDataProperties.m in Sources */,
+				F491159A1DFF92780098561E /* MoveBand.xcdatamodeld in Sources */,
+				F49115A91DFF95800098561E /* SPKUser+CoreDataClass.m in Sources */,
 				F49115681DFF86B00098561E /* AppDelegate.m in Sources */,
+				F49115AB1DFF95800098561E /* SPKHistoryDataPacket+CoreDataClass.m in Sources */,
 				F49115651DFF86B00098561E /* main.m in Sources */,
+				F49115AA1DFF95800098561E /* SPKUser+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +580,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F49115981DFF92780098561E /* MoveBand.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F49115991DFF92780098561E /* MoveBand.xcdatamodel */,
+			);
+			currentVersion = F49115991DFF92780098561E /* MoveBand.xcdatamodel */;
+			path = MoveBand.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F49115581DFF86B00098561E /* Project object */;
 }
