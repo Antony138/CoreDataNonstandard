@@ -18,6 +18,7 @@
 		F49115971DFF86F80098561E /* MoveBand.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F49115961DFF86F80098561E /* MoveBand.xcdatamodel */; };
 		F4B15EE61DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B15EE31DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m */; };
 		F4B15EE71DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B15EE51DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m */; };
+		F4B15EEA1DFFBFEF0087EC7C /* SPKDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B15EE91DFFBFEF0087EC7C /* SPKDataStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		F4B15EE31DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKUser+CoreDataClass.m"; sourceTree = "<group>"; };
 		F4B15EE41DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPKUser+CoreDataProperties.h"; sourceTree = "<group>"; };
 		F4B15EE51DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F4B15EE81DFFBFEF0087EC7C /* SPKDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKDataStore.h; sourceTree = "<group>"; };
+		F4B15EE91DFFBFEF0087EC7C /* SPKDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKDataStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +112,7 @@
 		F49115621DFF86B00098561E /* CoreDataPractice */ = {
 			isa = PBXGroup;
 			children = (
-				F4B15EE21DFFA2CF0087EC7C /* SPKUser+CoreDataClass.h */,
-				F4B15EE31DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m */,
-				F4B15EE41DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.h */,
-				F4B15EE51DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m */,
-				F49115961DFF86F80098561E /* MoveBand.xcdatamodel */,
+				F4B15EEB1DFFBFF70087EC7C /* Model */,
 				F49115661DFF86B00098561E /* AppDelegate.h */,
 				F49115671DFF86B00098561E /* AppDelegate.m */,
 				F49115691DFF86B00098561E /* ViewController.h */,
@@ -151,6 +150,20 @@
 				F491158A1DFF86B00098561E /* Info.plist */,
 			);
 			path = CoreDataPracticeUITests;
+			sourceTree = "<group>";
+		};
+		F4B15EEB1DFFBFF70087EC7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4B15EE81DFFBFEF0087EC7C /* SPKDataStore.h */,
+				F4B15EE91DFFBFEF0087EC7C /* SPKDataStore.m */,
+				F4B15EE21DFFA2CF0087EC7C /* SPKUser+CoreDataClass.h */,
+				F4B15EE31DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m */,
+				F4B15EE41DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.h */,
+				F4B15EE51DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m */,
+				F49115961DFF86F80098561E /* MoveBand.xcdatamodel */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B15EE61DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m in Sources */,
+				F4B15EEA1DFFBFEF0087EC7C /* SPKDataStore.m in Sources */,
 				F49115971DFF86F80098561E /* MoveBand.xcdatamodel in Sources */,
 				F491156B1DFF86B00098561E /* ViewController.m in Sources */,
 				F4B15EE71DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m in Sources */,
