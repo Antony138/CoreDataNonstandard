@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<SPKUser *> *)fetchRequest;
 
-@property (nullable, nonatomic, retain) NSData *achievements;
-@property (nullable, nonatomic, retain) NSData *allHistoryDataPackets;
+@property (nullable, nonatomic, retain) NSArray *achievements;
+@property (nullable, nonatomic, retain) NSMutableArray *allHistoryDataPackets;
 @property (nullable, nonatomic, retain) NSObject *color;
 @property (nullable, nonatomic, retain) NSObject *icon;
 @property (nullable, nonatomic, retain) NSObject *imgeRect;
