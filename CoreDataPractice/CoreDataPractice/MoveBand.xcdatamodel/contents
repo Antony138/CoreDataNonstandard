@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="SPKAchievemet" representedClassName="SPKAchievemet" syncable="YES">
-        <attribute name="comleteDegree" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="isReach" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="reachedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SPKUser" inverseName="achivements" inverseEntity="SPKUser" syncable="YES"/>
-    </entity>
-    <entity name="SPKHistoryDataPacket" representedClassName="SPKHistoryDataPacket" syncable="YES" codeGenerationType="class">
-        <attribute name="endTimeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="isUpload" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="startTimeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="steps" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SPKUser" inverseName="dataPackets" inverseEntity="SPKUser" syncable="YES"/>
-    </entity>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="SPKUser" representedClassName="SPKUser" syncable="YES">
         <attribute name="achievements" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="allHistoryDataPackets" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -21,12 +7,8 @@
         <attribute name="icon" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="imgeRect" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="userWeightUnit" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <relationship name="achivements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SPKAchievemet" inverseName="user" inverseEntity="SPKAchievemet" syncable="YES"/>
-        <relationship name="dataPackets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SPKHistoryDataPacket" inverseName="user" inverseEntity="SPKHistoryDataPacket" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SPKAchievemet" positionX="-27" positionY="-63" width="128" height="118"/>
-        <element name="SPKHistoryDataPacket" positionX="-20" positionY="108" width="128" height="118"/>
-        <element name="SPKUser" positionX="-261" positionY="-9" width="128" height="163"/>
+        <element name="SPKUser" positionX="-261" positionY="-9" width="128" height="135"/>
     </elements>
 </model>
