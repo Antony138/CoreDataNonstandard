@@ -15,6 +15,7 @@
 		F49115731DFF86B00098561E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49115711DFF86B00098561E /* LaunchScreen.storyboard */; };
 		F491157E1DFF86B00098561E /* CoreDataPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F491157D1DFF86B00098561E /* CoreDataPracticeTests.m */; };
 		F49115891DFF86B00098561E /* CoreDataPracticeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F49115881DFF86B00098561E /* CoreDataPracticeUITests.m */; };
+		F49115971DFF86F80098561E /* MoveBand.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F49115961DFF86F80098561E /* MoveBand.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F49115841DFF86B00098561E /* CoreDataPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49115881DFF86B00098561E /* CoreDataPracticeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataPracticeUITests.m; sourceTree = "<group>"; };
 		F491158A1DFF86B00098561E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49115961DFF86F80098561E /* MoveBand.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoveBand.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		F49115621DFF86B00098561E /* CoreDataPractice */ = {
 			isa = PBXGroup;
 			children = (
+				F49115961DFF86F80098561E /* MoveBand.xcdatamodel */,
 				F49115661DFF86B00098561E /* AppDelegate.h */,
 				F49115671DFF86B00098561E /* AppDelegate.m */,
 				F49115691DFF86B00098561E /* ViewController.h */,
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49115971DFF86F80098561E /* MoveBand.xcdatamodel in Sources */,
 				F491156B1DFF86B00098561E /* ViewController.m in Sources */,
 				F49115681DFF86B00098561E /* AppDelegate.m in Sources */,
 				F49115651DFF86B00098561E /* main.m in Sources */,
