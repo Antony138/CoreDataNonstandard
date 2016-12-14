@@ -65,10 +65,11 @@
     // 创建request对象(作用:告诉CoreData,你要获取什么数据)
     NSFetchRequest *loadAllUsersRequest = [[NSFetchRequest alloc] init];
     
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"SPKUser" inManagedObjectContext:_persistentContainer.viewContext];
+    // NSEntityDescription，就表示SPKUser这个entity？
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"SPKUser" inManagedObjectContext:self.persistentContainer.viewContext];
     
+    // 表示要request的entity是SPKUser？
     loadAllUsersRequest.entity = entity;
-    
     
     NSError *error = nil;
     
@@ -79,6 +80,7 @@
         return nil;
     }
     else {
+        NSLog(@"Fetch succed! users:%@; users count:%@", users, @(users.count));
         return users;
     }
 }
