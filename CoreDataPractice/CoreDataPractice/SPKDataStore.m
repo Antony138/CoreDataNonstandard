@@ -7,12 +7,22 @@
 //
 
 #import "SPKDataStore.h"
-#import <CoreData/CoreData.h>
+@import CoreData;
+@import UIKit;
+
+// 查明系统是否小于某个版本
+#define VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
 @interface SPKDataStore ()
 
-// iOS10新出现的类
+// For iOS10(iOS10新出现的类)
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
+
+// For less than iOS10
+@property (nonatomic, strong) NSManagedObjectContext *context;
+
+@property (nonatomic, strong) NSManagedObjectModel *model;
+
 
 @end
 
@@ -31,6 +41,27 @@
 {
     self = [super init];
     if (self) {
+        
+        if ( VERSION_LESS_THAN(@"10.0") ) {
+            // 非iOS10的系统，不能用NSPersistentContainer类去创建CoreData stack
+            
+            _model = [NSManagedObjectModel mergedModelFromBundles:nil];
+            
+            NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_model];
+            
+            NSString *path = [self dataArchivePath];
+            NSURL *storeURL = [NSURL fileURLWithPath:path];
+            
+            NSError *error = nil;
+            
+            if (![psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+                @throw [NSException exceptionWithName:@"OpenFailure" reason:[error localizedDescription] userInfo:nil];
+            }
+            
+            _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+            _context.persistentStoreCoordinator = psc;
+        }
+        
         [self loadAllUsers];
     }
     return self;
@@ -38,6 +69,7 @@
 
 #pragma mark - Core Data stack
 
+// iOS10的方法
 @synthesize persistentContainer = _persistentContainer;
 
 // 覆盖取方法
@@ -61,12 +93,29 @@
     return _persistentContainer;
 }
 
+// 非iOS10的方法
+// 自定义数据保存路径
+- (NSString *)dataArchivePath
+{
+    // Make sure that the first argument is NSDocumentDirectory
+    // and not NSDocumentationDirectory
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    // Get the one document directory from that list
+    NSString *documentDirectory = [documentDirectories firstObject];
+    
+    return [documentDirectory stringByAppendingPathComponent:@"spkusers.data"];
+}
+
+# pragma mark -
 - (NSArray *)loadAllUsers {
     // 创建request对象(作用:告诉CoreData,你要获取什么数据)
     NSFetchRequest *loadAllUsersRequest = [[NSFetchRequest alloc] init];
     
     // NSEntityDescription，就表示SPKUser这个entity？
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"SPKUser" inManagedObjectContext:self.persistentContainer.viewContext];
+    // iOS10与否，传入不同的context对象
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"SPKUser"
+                                              inManagedObjectContext: VERSION_LESS_THAN(@"10.0") ? self.context : self.persistentContainer.viewContext];
     
     // 表示要request的entity是SPKUser？
     loadAllUsersRequest.entity = entity;
