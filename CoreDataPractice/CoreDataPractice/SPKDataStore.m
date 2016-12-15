@@ -157,6 +157,8 @@ static NSString *kiOS10      = @"10.0";
     // 每个用户5包数据
     newUser.allHistoryDataPackets = [NSMutableArray arrayWithObjects:@"pack1", @"pack2", @"pack3", @"pack4", @"pack5", nil];
     
+    newUser.color = [UIColor blueColor];
+    
     BOOL saveSucceed = [VERSION_LESS_THAN(kiOS10) ? self.context : self.persistentContainer.viewContext save:&error];
     
     if (saveSucceed == YES) {

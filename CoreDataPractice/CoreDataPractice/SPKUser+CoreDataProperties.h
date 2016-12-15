@@ -7,7 +7,7 @@
 //
 
 #import "SPKUser+CoreDataClass.h"
-
+@import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSArray *achievements;
 @property (nullable, nonatomic, retain) NSMutableArray *allHistoryDataPackets;
-@property (nullable, nonatomic, retain) NSObject *color;
+// UIColor直接可以保存？
+@property (nullable, nonatomic, retain) UIColor *color;
 @property (nullable, nonatomic, retain) NSObject *icon;
 @property (nullable, nonatomic, retain) NSObject *imgeRect;
 @property (nullable, nonatomic, retain) NSObject *userWeightUnit;

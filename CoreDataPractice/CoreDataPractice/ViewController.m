@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *usersCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *achievmentCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dataPackCountLabel;
+@property (weak, nonatomic) IBOutlet UIView *colorView;
 
 @end
 
@@ -42,6 +43,9 @@
     
     // Get total of dataPack of first user
     _dataPackCountLabel.text   = [@(firstUser.allHistoryDataPackets.count) stringValue];
+    
+    // Get color
+    _colorView.backgroundColor = firstUser.color;
 }
 
 - (void)didReceiveMemoryWarning {
