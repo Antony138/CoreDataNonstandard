@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *achievmentCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dataPackCountLabel;
 @property (weak, nonatomic) IBOutlet UIView *colorView;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 
 @end
 
@@ -46,6 +47,9 @@
     
     // Get color
     _colorView.backgroundColor = firstUser.color;
+    
+    // Get UIImage
+    _iconImageView.image = firstUser.icon;
 }
 
 - (void)didReceiveMemoryWarning {

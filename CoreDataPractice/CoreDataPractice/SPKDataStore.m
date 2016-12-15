@@ -159,6 +159,8 @@ static NSString *kiOS10      = @"10.0";
     
     newUser.color = [UIColor blueColor];
     
+    newUser.icon = [UIImage imageNamed:@"scanning"];
+    
     BOOL saveSucceed = [VERSION_LESS_THAN(kiOS10) ? self.context : self.persistentContainer.viewContext save:&error];
     
     if (saveSucceed == YES) {

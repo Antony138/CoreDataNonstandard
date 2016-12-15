@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSMutableArray *allHistoryDataPackets;
 // UIColor直接可以保存？
 @property (nullable, nonatomic, retain) UIColor *color;
-@property (nullable, nonatomic, retain) NSObject *icon;
+@property (nullable, nonatomic, retain) UIImage *icon;
 @property (nullable, nonatomic, retain) NSObject *imgeRect;
 @property (nullable, nonatomic, retain) NSObject *userWeightUnit;
 
