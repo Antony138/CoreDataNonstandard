@@ -11,6 +11,8 @@
 
 @interface SPKDataStore : NSObject
 
+@property (copy, nonatomic) NSArray *allUsers;
+
 + (instancetype)shareStore;
 
 #pragma mark - 接口方法

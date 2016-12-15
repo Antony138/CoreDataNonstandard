@@ -22,26 +22,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPKUser有成就：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUc-iw-ICD">
-                                <rect key="frame" x="24" y="323" width="138" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第一个用户有成就：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUc-iw-ICD">
+                                <rect key="frame" x="24" y="323" width="156" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPKUser有数据包：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7B8-AU-HDs">
-                                <rect key="frame" x="24" y="382" width="155" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户数量是：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Czt-eV-LQF">
+                                <rect key="frame" x="24" y="273" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第一个用户有数据包：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7B8-AU-HDs">
+                                <rect key="frame" x="24" y="382" width="173.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="？？？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1T-gN-kBl">
-                                <rect key="frame" x="201" y="323" width="52" height="21"/>
+                                <rect key="frame" x="219" y="323" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="？？？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ5-Rd-S2u">
-                                <rect key="frame" x="201" y="382" width="52" height="21"/>
+                                <rect key="frame" x="219.5" y="382" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="？？？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqB-q9-abm">
+                                <rect key="frame" x="219" y="273" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,15 +64,24 @@
                             <constraint firstItem="dQ5-Rd-S2u" firstAttribute="leading" secondItem="7B8-AU-HDs" secondAttribute="trailing" constant="22" id="5rI-2j-LXh"/>
                             <constraint firstItem="W1T-gN-kBl" firstAttribute="top" secondItem="fUc-iw-ICD" secondAttribute="top" id="BZO-Qb-auX"/>
                             <constraint firstItem="dQ5-Rd-S2u" firstAttribute="top" secondItem="7B8-AU-HDs" secondAttribute="top" id="Bn0-YY-f0Q"/>
+                            <constraint firstItem="fUc-iw-ICD" firstAttribute="top" secondItem="Czt-eV-LQF" secondAttribute="bottom" constant="29" id="ERb-XZ-qGJ"/>
                             <constraint firstItem="W1T-gN-kBl" firstAttribute="leading" secondItem="fUc-iw-ICD" secondAttribute="trailing" constant="39" id="Gam-cz-Ytu"/>
+                            <constraint firstItem="W1T-gN-kBl" firstAttribute="centerX" secondItem="DqB-q9-abm" secondAttribute="centerX" id="Icj-yK-ZDG"/>
+                            <constraint firstItem="Czt-eV-LQF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="LoV-cO-XQA"/>
                             <constraint firstItem="fUc-iw-ICD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ly7-7M-2yu"/>
                             <constraint firstItem="fUc-iw-ICD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Yuy-dU-mtV"/>
                             <constraint firstItem="7B8-AU-HDs" firstAttribute="leading" secondItem="fUc-iw-ICD" secondAttribute="leading" id="f1u-UE-eBE"/>
                             <constraint firstItem="7B8-AU-HDs" firstAttribute="top" secondItem="fUc-iw-ICD" secondAttribute="bottom" constant="38" id="hPi-Jg-FJh"/>
                             <constraint firstItem="W1T-gN-kBl" firstAttribute="bottom" secondItem="fUc-iw-ICD" secondAttribute="bottom" id="iV5-hj-s38"/>
                             <constraint firstItem="dQ5-Rd-S2u" firstAttribute="bottom" secondItem="7B8-AU-HDs" secondAttribute="bottom" id="jaY-Gq-nC1"/>
+                            <constraint firstItem="DqB-q9-abm" firstAttribute="centerY" secondItem="Czt-eV-LQF" secondAttribute="centerY" id="lex-rm-DnT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="achievmentCountLabel" destination="W1T-gN-kBl" id="G21-ld-kLZ"/>
+                        <outlet property="dataPackCountLabel" destination="dQ5-Rd-S2u" id="QUz-wO-WCX"/>
+                        <outlet property="usersCountLabel" destination="DqB-q9-abm" id="tef-ZQ-xR9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

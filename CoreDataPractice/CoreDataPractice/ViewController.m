@@ -8,8 +8,13 @@
 
 #import "ViewController.h"
 #import "SPKDataStore.h"
+#import "SPKUser+CoreDataClass.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *usersCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *achievmentCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dataPackCountLabel;
 
 @end
 
@@ -23,9 +28,21 @@
         [[SPKDataStore shareStore] addUser];
     }
     
+    // Get all users
+    NSArray *allUsers = [SPKDataStore shareStore].allUsers;
     
+    // Display total of all users
+    _usersCountLabel.text = [@(allUsers.count) stringValue];
+    
+    // Get first user
+    SPKUser *firstUser = allUsers.firstObject;
+    
+    // Get total of achievment of first user
+    _achievmentCountLabel.text = [@(firstUser.achievements.count) stringValue];
+    
+    // Get total of dataPack of first user
+    _dataPackCountLabel.text   = [@(firstUser.allHistoryDataPackets.count) stringValue];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -112,6 +112,11 @@ static NSString *kiOS10      = @"10.0";
 }
 
 # pragma mark -
+
+- (NSArray *)allUsers {
+    return [self loadAllUsers];
+}
+
 - (NSArray *)loadAllUsers {
     // 创建request对象(作用:告诉CoreData,你要获取什么数据)
     NSFetchRequest *loadAllUsersRequest = [[NSFetchRequest alloc] init];
