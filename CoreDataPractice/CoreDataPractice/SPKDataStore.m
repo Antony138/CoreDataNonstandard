@@ -160,6 +160,8 @@ static NSString *kiOS10      = @"10.0";
     newUser.color = [UIColor blueColor];
     
     newUser.icon = [UIImage imageNamed:@"scanning"];
+
+    newUser.imgeRect = [NSValue valueWithCGRect:CGRectMake(0.0, 0.0, 100.0, 100.0)];
     
     BOOL saveSucceed = [VERSION_LESS_THAN(kiOS10) ? self.context : self.persistentContainer.viewContext save:&error];
     

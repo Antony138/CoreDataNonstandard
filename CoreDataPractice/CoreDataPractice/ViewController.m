@@ -50,6 +50,10 @@
     
     // Get UIImage
     _iconImageView.image = firstUser.icon;
+    
+    // Get CGrect
+    CGRect imageRect = [firstUser.imgeRect CGRectValue];
+    NSLog(@"origin: %@, %@; size: %@, %@", @(imageRect.origin.x), @(imageRect.origin.y), @(imageRect.size.width), @(imageRect.size.height));
 }
 
 - (void)didReceiveMemoryWarning {

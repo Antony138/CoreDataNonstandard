@@ -17,10 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSArray *achievements;
 @property (nullable, nonatomic, retain) NSMutableArray *allHistoryDataPackets;
-// UIColor直接可以保存？
+// UIColor直接可以保存？YES，选择transformable类型，直接会帮你自动转换成NSData的
 @property (nullable, nonatomic, retain) UIColor *color;
 @property (nullable, nonatomic, retain) UIImage *icon;
-@property (nullable, nonatomic, retain) NSObject *imgeRect;
+// 貌似只能声明成NSValue类型，读取、赋值时再进行转换
+@property (nullable, nonatomic, retain) NSValue *imgeRect;
 @property (nullable, nonatomic, retain) NSObject *userWeightUnit;
 
 @end
