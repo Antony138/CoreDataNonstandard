@@ -19,6 +19,8 @@
 		F4B15EE61DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B15EE31DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m */; };
 		F4B15EE71DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B15EE51DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m */; };
 		F4B15EEA1DFFBFEF0087EC7C /* SPKDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B15EE91DFFBFEF0087EC7C /* SPKDataStore.m */; };
+		F4B15EEE1E0241950087EC7C /* SPKAchivementTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B15EED1E0241950087EC7C /* SPKAchivementTransformer.m */; };
+		F4B15EF11E0244FA0087EC7C /* SPKDataPackTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B15EF01E0244FA0087EC7C /* SPKDataPackTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,10 @@
 		F4B15EE51DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F4B15EE81DFFBFEF0087EC7C /* SPKDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKDataStore.h; sourceTree = "<group>"; };
 		F4B15EE91DFFBFEF0087EC7C /* SPKDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKDataStore.m; sourceTree = "<group>"; };
+		F4B15EEC1E0241950087EC7C /* SPKAchivementTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKAchivementTransformer.h; sourceTree = "<group>"; };
+		F4B15EED1E0241950087EC7C /* SPKAchivementTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKAchivementTransformer.m; sourceTree = "<group>"; };
+		F4B15EEF1E0244FA0087EC7C /* SPKDataPackTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKDataPackTransformer.h; sourceTree = "<group>"; };
+		F4B15EF01E0244FA0087EC7C /* SPKDataPackTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKDataPackTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,9 +167,21 @@
 				F4B15EE31DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m */,
 				F4B15EE41DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.h */,
 				F4B15EE51DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m */,
+				F4B15EF21E0247ED0087EC7C /* ValueTransformer */,
 				F49115961DFF86F80098561E /* MoveBand.xcdatamodel */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F4B15EF21E0247ED0087EC7C /* ValueTransformer */ = {
+			isa = PBXGroup;
+			children = (
+				F4B15EEC1E0241950087EC7C /* SPKAchivementTransformer.h */,
+				F4B15EED1E0241950087EC7C /* SPKAchivementTransformer.m */,
+				F4B15EEF1E0244FA0087EC7C /* SPKDataPackTransformer.h */,
+				F4B15EF01E0244FA0087EC7C /* SPKDataPackTransformer.m */,
+			);
+			name = ValueTransformer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B15EE61DFFA2CF0087EC7C /* SPKUser+CoreDataClass.m in Sources */,
+				F4B15EF11E0244FA0087EC7C /* SPKDataPackTransformer.m in Sources */,
 				F4B15EEA1DFFBFEF0087EC7C /* SPKDataStore.m in Sources */,
+				F4B15EEE1E0241950087EC7C /* SPKAchivementTransformer.m in Sources */,
 				F49115971DFF86F80098561E /* MoveBand.xcdatamodel in Sources */,
 				F491156B1DFF86B00098561E /* ViewController.m in Sources */,
 				F4B15EE71DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m in Sources */,

@@ -14,6 +14,7 @@
 + (instancetype)shareStore;
 
 #pragma mark - 接口方法
+- (void)addUser;
 
 
 

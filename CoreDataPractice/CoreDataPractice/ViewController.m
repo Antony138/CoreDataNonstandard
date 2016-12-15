@@ -18,8 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    [SPKDataStore shareStore];
+
+    for (int i = 0; i < 5; i++) {
+        [[SPKDataStore shareStore] addUser];
+    }
     
     
 }

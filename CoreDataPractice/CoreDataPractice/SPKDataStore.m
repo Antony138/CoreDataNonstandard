@@ -9,9 +9,14 @@
 #import "SPKDataStore.h"
 @import CoreData;
 @import UIKit;
+#import "SPKUser+CoreDataClass.h"
 
 // 查明系统是否小于某个版本
 #define VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
+static NSString *kEntityName = @"SPKUser";
+static NSString *kModelName  = @"MoveBand";
+static NSString *kiOS10      = @"10.0";
 
 @interface SPKDataStore ()
 
@@ -37,8 +42,7 @@
     return shareStore;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         
@@ -78,7 +82,7 @@
     @synchronized (self) {
         if (_persistentContainer == nil) {
             
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"MoveBand"];
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:kModelName];
             
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 
@@ -114,7 +118,7 @@
     
     // NSEntityDescription，就表示SPKUser这个entity？
     // iOS10与否，传入不同的context对象
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"SPKUser"
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kEntityName
                                               inManagedObjectContext: VERSION_LESS_THAN(@"10.0") ? self.context : self.persistentContainer.viewContext];
     
     // 表示要request的entity是SPKUser？
@@ -131,6 +135,30 @@
     else {
         NSLog(@"Fetch succed! users:%@; users count:%@", users, @(users.count));
         return users;
+    }
+}
+
+- (void)addUser {
+    NSError *error = nil;
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kEntityName
+                                              inManagedObjectContext:VERSION_LESS_THAN(kiOS10) ? self.context : self.persistentContainer.viewContext];
+    
+    SPKUser *newUser = (SPKUser *)[[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:VERSION_LESS_THAN(kiOS10) ? self.context : self.persistentContainer.viewContext];
+    
+    // 每个用户5个成就
+    newUser.achievements = @[@"achivement1", @"achivement2", @"achivement3", @"achivement4", @"achivement5"];
+    
+    // 每个用户5包数据
+    newUser.allHistoryDataPackets = [NSMutableArray arrayWithObjects:@"pack1", @"pack2", @"pack3", @"pack4", @"pack5", nil];
+    
+    BOOL saveSucceed = [VERSION_LESS_THAN(kiOS10) ? self.context : self.persistentContainer.viewContext save:&error];
+    
+    if (saveSucceed == YES) {
+        NSLog(@"新增一个用户，并保存成功");
+    }
+    else {
+        NSLog(@"新增用户失败. Unresolved error %@, %@", error, error.userInfo);
     }
 }
 
