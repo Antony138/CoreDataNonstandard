@@ -8,6 +8,7 @@
 
 #import "SPKUser+CoreDataClass.h"
 @import UIKit;
+#import "SPKPublic.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) UIImage *icon;
 // 貌似只能声明成NSValue类型，读取、赋值时再进行转换
 @property (nullable, nonatomic, retain) NSValue *imgeRect;
+
 @property (nullable, nonatomic, retain) NSObject *userWeightUnit;
 
 @end

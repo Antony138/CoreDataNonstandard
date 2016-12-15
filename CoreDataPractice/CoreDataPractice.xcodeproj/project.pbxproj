@@ -62,6 +62,7 @@
 		F4B15EE51DFFA2CF0087EC7C /* SPKUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPKUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F4B15EE81DFFBFEF0087EC7C /* SPKDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKDataStore.h; sourceTree = "<group>"; };
 		F4B15EE91DFFBFEF0087EC7C /* SPKDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKDataStore.m; sourceTree = "<group>"; };
+		F4B15EF61E0293B70087EC7C /* SPKPublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKPublic.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +113,7 @@
 		F49115621DFF86B00098561E /* CoreDataPractice */ = {
 			isa = PBXGroup;
 			children = (
+				F4B15EF61E0293B70087EC7C /* SPKPublic.h */,
 				F4B15EEB1DFFBFF70087EC7C /* Model */,
 				F49115661DFF86B00098561E /* AppDelegate.h */,
 				F49115671DFF86B00098561E /* AppDelegate.m */,
