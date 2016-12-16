@@ -46,7 +46,7 @@ static NSString *kiOS10      = @"10.0";
     self = [super init];
     if (self) {
         
-        if ( VERSION_LESS_THAN(@"10.0") ) {
+        if ( VERSION_LESS_THAN(kiOS10) ) {
             // 非iOS10的系统，不能用NSPersistentContainer类去创建CoreData stack
             
             _model = [NSManagedObjectModel mergedModelFromBundles:nil];
@@ -109,6 +109,7 @@ static NSString *kiOS10      = @"10.0";
     NSString *documentDirectory = [documentDirectories firstObject];
     
     return [documentDirectory stringByAppendingPathComponent:@"spkusers.data"];
+    // spkusers.sqlite
 }
 
 # pragma mark -
@@ -124,14 +125,14 @@ static NSString *kiOS10      = @"10.0";
     // NSEntityDescription，就表示SPKUser这个entity？
     // iOS10与否，传入不同的context对象
     NSEntityDescription *entity = [NSEntityDescription entityForName:kEntityName
-                                              inManagedObjectContext: VERSION_LESS_THAN(@"10.0") ? self.context : self.persistentContainer.viewContext];
+                                              inManagedObjectContext: VERSION_LESS_THAN(kiOS10) ? self.context : self.persistentContainer.viewContext];
     
     // 表示要request的entity是SPKUser？
     loadAllUsersRequest.entity = entity;
     
     NSError *error = nil;
     
-    NSArray *users = [_persistentContainer.viewContext executeFetchRequest:loadAllUsersRequest error:&error];
+    NSArray *users = [VERSION_LESS_THAN(kiOS10) ? self.context : _persistentContainer.viewContext executeFetchRequest:loadAllUsersRequest error:&error];
     
     if (error != nil) {
         NSLog(@"Fetch Fail. Unresolved error %@, %@", error, error.userInfo);
