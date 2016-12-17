@@ -7,8 +7,9 @@
         <attribute name="icon" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="imgeRect" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="userWeightUnit" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="userWeightUnitTemp" optional="YES" attributeType="Transformable" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SPKUser" positionX="-63" positionY="-63" width="128" height="133"/>
+        <element name="SPKUser" positionX="-63" positionY="-63" width="128" height="148"/>
     </elements>
 </model>

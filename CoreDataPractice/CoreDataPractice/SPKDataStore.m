@@ -164,6 +164,12 @@ static NSString *kiOS10      = @"10.0";
 
     newUser.imgeRect = [NSValue valueWithCGRect:CGRectMake(0.0, 0.0, 100.0, 100.0)];
     
+    // 用enum来赋值
+    newUser.userWeightUnit = UserWeightUnit_Pound;
+    
+    // 用NSNumber对象来赋值、保存
+    // newUser.userWeightUnitTemp = [NSNumber numberWithUnsignedInteger:UserWeightUnit_KG];
+    
     BOOL saveSucceed = [VERSION_LESS_THAN(kiOS10) ? self.context : self.persistentContainer.viewContext save:&error];
     
     if (saveSucceed == YES) {

@@ -54,11 +54,22 @@
     // Get CGrect
     CGRect imageRect = [firstUser.imgeRect CGRectValue];
     NSLog(@"origin: %@, %@; size: %@, %@", @(imageRect.origin.x), @(imageRect.origin.y), @(imageRect.size.width), @(imageRect.size.height));
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    // 用enum类型属性进行比较
+    if (firstUser.userWeightUnit == UserWeightUnit_KG) {
+        NSLog(@"(enum)使用者选择了KG");
+    }
+    else {
+        NSLog(@"(enum)使用者选择了Pound");
+    }
+    
+    // 用NSNumber类型属性进行比较
+    if ([firstUser.userWeightUnitTemp unsignedIntegerValue] == UserWeightUnit_KG) {
+        NSLog(@"(NSNumber)使用者选择了KG");
+    }
+    else {
+        NSLog(@"(NSNumber)使用者选择了Pound");
+    }
 }
 
 

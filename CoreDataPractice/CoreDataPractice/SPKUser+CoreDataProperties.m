@@ -20,5 +20,14 @@
 @dynamic icon;
 @dynamic imgeRect;
 @dynamic userWeightUnit;
+@dynamic userWeightUnitTemp;
+
+- (UserWeightUnit)userWeightUnit {
+    return [self.userWeightUnitTemp unsignedIntegerValue];
+}
+
+- (void)setUserWeightUnit:(UserWeightUnit)userWeightUnit {
+    self.userWeightUnitTemp = @(userWeightUnit);
+}
 
 @end
