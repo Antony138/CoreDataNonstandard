@@ -16,6 +16,7 @@
 		0AAF4D001E72E504004B62FD /* UsingCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4CFF1E72E504004B62FD /* UsingCoreDataTests.m */; };
 		0AAF4D0B1E72E504004B62FD /* UsingCoreDataUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4D0A1E72E504004B62FD /* UsingCoreDataUITests.m */; };
 		0AAF4D1B1E72E56C004B62FD /* HAStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4D1A1E72E56C004B62FD /* HAStore.m */; };
+		0AAF4D1F1E72E68D004B62FD /* Company.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4D1D1E72E68D004B62FD /* Company.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		0AAF4D0C1E72E504004B62FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AAF4D191E72E56C004B62FD /* HAStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAStore.h; sourceTree = "<group>"; };
 		0AAF4D1A1E72E56C004B62FD /* HAStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAStore.m; sourceTree = "<group>"; };
+		0AAF4D1E1E72E68D004B62FD /* Company.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Company.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				0AAF4CEB1E72E504004B62FD /* ViewController.h */,
 				0AAF4CEC1E72E504004B62FD /* ViewController.m */,
 				0AAF4CEE1E72E504004B62FD /* Main.storyboard */,
+				0AAF4D1C1E72E65C004B62FD /* Model */,
 				0AAF4D181E72E524004B62FD /* Store */,
 				0AAF4CE51E72E504004B62FD /* Supporting Files */,
 			);
@@ -151,6 +154,14 @@
 				0AAF4D1A1E72E56C004B62FD /* HAStore.m */,
 			);
 			name = Store;
+			sourceTree = "<group>";
+		};
+		0AAF4D1C1E72E65C004B62FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF4D1D1E72E68D004B62FD /* Company.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAF4D1F1E72E68D004B62FD /* Company.xcdatamodeld in Sources */,
 				0AAF4CED1E72E504004B62FD /* ViewController.m in Sources */,
 				0AAF4CEA1E72E504004B62FD /* AppDelegate.m in Sources */,
 				0AAF4D1B1E72E56C004B62FD /* HAStore.m in Sources */,
@@ -548,6 +560,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0AAF4D1D1E72E68D004B62FD /* Company.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0AAF4D1E1E72E68D004B62FD /* Company.xcdatamodel */,
+			);
+			currentVersion = 0AAF4D1E1E72E68D004B62FD /* Company.xcdatamodel */;
+			path = Company.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0AAF4CDA1E72E504004B62FD /* Project object */;
 }
