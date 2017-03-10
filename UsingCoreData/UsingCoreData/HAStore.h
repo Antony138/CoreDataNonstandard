@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^DidFetchDataBlock)(NSArray *allItem);
+
 @interface HAStore : NSObject
+
+@property (copy, nonatomic) NSArray *allItems;
+
+@property (copy, nonatomic)DidFetchDataBlock didFetchDataBlock;
+
+- (void)insertNewItem;
+
+- (void)removeItem;
+
+- (void)save;
 
 @end

@@ -9,6 +9,7 @@
 #import "HAStore.h"
 @import CoreData;
 
+
 @interface HAStore ()
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
@@ -58,5 +59,41 @@
     });
 }
 
+- (NSArray *)allItems {
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
+    
+    NSError *error = nil;
+    
+    NSArray *results = [_context executeFetchRequest:request error:&error];
+    
+    if (!results) {
+        NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
+        abort();
+    }
+    
+    if (_didFetchDataBlock) {
+        _didFetchDataBlock(results);
+    }
+    NSLog(@"从沙盒拿回了数据，数据量是%@", @(results.count));
+    
+    return results;
+}
+
+- (void)insertNewItem {
+    [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:_context];
+    [self save];
+    NSLog(@"插入并保存了一条数据");
+}
+
+- (void)save {
+    NSError *error = nil;
+    if ([_context save:&error] == NO) {
+        NSAssert(NO, @"Error saving context %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+}
+
+- (void)removeItem {
+//    [_context deleteObject:<#(nonnull NSManagedObject *)#>]
+}
 
 @end
