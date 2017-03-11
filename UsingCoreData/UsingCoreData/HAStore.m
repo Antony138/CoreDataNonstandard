@@ -66,6 +66,14 @@
     
     NSArray *results = [_context executeFetchRequest:request error:&error];
     
+    NSManagedObject *firstEmployee = results.firstObject;
+    
+    // Log managed object values
+    NSLog(@"firstEmployeeName:%@", [firstEmployee valueForKeyPath:@"name"]);
+    NSLog(@"age: %@", [firstEmployee valueForKeyPath:@"age"]);
+    NSLog(@"isFreshman: %@", [firstEmployee valueForKeyPath:@"isFreshman"]);
+    NSLog(@"startDate: %@", [firstEmployee valueForKeyPath:@"startDate"]);
+    
     if (!results) {
         NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
         abort();
@@ -80,9 +88,17 @@
 }
 
 - (void)insertNewItem {
-    [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:_context];
+    
+    // insert managed object
+    NSManagedObject *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:_context];
+    
+    // assign managed object
+    [employee setValue:@"Antony" forKeyPath:@"name"];
+    [employee setValue:@(31) forKeyPath:@"age"];
+    [employee setValue:@(1) forKeyPath:@"isFreshman"];
+    [employee setValue:[NSDate date] forKeyPath:@"startDate"];
+    
     [self save];
-    NSLog(@"插入并保存了一条数据");
 }
 
 - (void)save {
