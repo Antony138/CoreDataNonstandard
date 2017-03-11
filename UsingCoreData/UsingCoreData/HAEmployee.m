@@ -1,13 +1,17 @@
 //
-//  Employee+CoreDataClass.m
+//  HAEmployee.m
 //  UsingCoreData
 //
 //  Created by SPK_Antony on 11/03/2017.
 //  Copyright © 2017 Spark Technology Inc. All rights reserved.
 //
 
-#import "Employee+CoreDataClass.h"
+#import "HAEmployee.h"
 
-@implementation Employee
+@implementation HAEmployee
+@dynamic name;
+@dynamic age;
+@dynamic isFreshman;
+@dynamic startDate;
 
 @end

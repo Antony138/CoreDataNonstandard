@@ -7,7 +7,7 @@
 //
 
 #import "HAStore.h"
-#import "Employee+CoreDataClass.h"
+#import "HAEmployee.h"
 @import CoreData;
 
 @interface HAStore ()
@@ -67,7 +67,7 @@
     NSArray *results = [_context executeFetchRequest:request error:&error];
     
     // Use NSManagedObject
-    Employee *firstEmployee = results.firstObject;
+    HAEmployee *firstEmployee = results.firstObject;
     
     NSLog(@"firstEmployeeName:%@", firstEmployee.name);
     NSLog(@"age: %@", @(firstEmployee.age));
@@ -114,7 +114,7 @@
     
     // Use NSManagedObject subclass
     // insert managed object
-    Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:_context];
+    HAEmployee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:_context];
     
     // assign managed object
     employee.name = @"Anotny";
