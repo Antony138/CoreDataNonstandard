@@ -17,6 +17,8 @@
 		0AAF4D0B1E72E504004B62FD /* UsingCoreDataUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4D0A1E72E504004B62FD /* UsingCoreDataUITests.m */; };
 		0AAF4D1B1E72E56C004B62FD /* HAStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4D1A1E72E56C004B62FD /* HAStore.m */; };
 		0AAF4D1F1E72E68D004B62FD /* Company.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4D1D1E72E68D004B62FD /* Company.xcdatamodeld */; };
+		F43966A11E73C3C500D838ED /* Employee+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F439669E1E73C3C500D838ED /* Employee+CoreDataClass.m */; };
+		F43966A21E73C3C500D838ED /* Employee+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F43966A01E73C3C500D838ED /* Employee+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		0AAF4D191E72E56C004B62FD /* HAStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAStore.h; sourceTree = "<group>"; };
 		0AAF4D1A1E72E56C004B62FD /* HAStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAStore.m; sourceTree = "<group>"; };
 		0AAF4D1E1E72E68D004B62FD /* Company.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Company.xcdatamodel; sourceTree = "<group>"; };
+		F439669D1E73C3C500D838ED /* Employee+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataClass.h"; sourceTree = "<group>"; };
+		F439669E1E73C3C500D838ED /* Employee+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataClass.m"; sourceTree = "<group>"; };
+		F439669F1E73C3C500D838ED /* Employee+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F43966A01E73C3C500D838ED /* Employee+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,10 @@
 		0AAF4D1C1E72E65C004B62FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F439669D1E73C3C500D838ED /* Employee+CoreDataClass.h */,
+				F439669E1E73C3C500D838ED /* Employee+CoreDataClass.m */,
+				F439669F1E73C3C500D838ED /* Employee+CoreDataProperties.h */,
+				F43966A01E73C3C500D838ED /* Employee+CoreDataProperties.m */,
 				0AAF4D1D1E72E68D004B62FD /* Company.xcdatamodeld */,
 			);
 			name = Model;
@@ -300,9 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43966A21E73C3C500D838ED /* Employee+CoreDataProperties.m in Sources */,
 				0AAF4D1F1E72E68D004B62FD /* Company.xcdatamodeld in Sources */,
 				0AAF4CED1E72E504004B62FD /* ViewController.m in Sources */,
 				0AAF4CEA1E72E504004B62FD /* AppDelegate.m in Sources */,
+				F43966A11E73C3C500D838ED /* Employee+CoreDataClass.m in Sources */,
 				0AAF4D1B1E72E56C004B62FD /* HAStore.m in Sources */,
 				0AAF4CE71E72E504004B62FD /* main.m in Sources */,
 			);
@@ -544,6 +556,7 @@
 				0AAF4D111E72E504004B62FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AAF4D121E72E504004B62FD /* Build configuration list for PBXNativeTarget "UsingCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +565,7 @@
 				0AAF4D141E72E504004B62FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AAF4D151E72E504004B62FD /* Build configuration list for PBXNativeTarget "UsingCoreDataUITests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +574,7 @@
 				0AAF4D171E72E504004B62FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,8 +7,8 @@
 //
 
 #import "HAStore.h"
+#import "Employee+CoreDataClass.h"
 @import CoreData;
-
 
 @interface HAStore ()
 
@@ -66,6 +66,16 @@
     
     NSArray *results = [_context executeFetchRequest:request error:&error];
     
+    // Use NSManagedObject
+    Employee *firstEmployee = results.firstObject;
+    
+    NSLog(@"firstEmployeeName:%@", firstEmployee.name);
+    NSLog(@"age: %@", @(firstEmployee.age));
+    NSLog(@"isFreshman: %@", @(firstEmployee.isFreshman));
+    NSLog(@"startDate: %@", firstEmployee.startDate);
+    
+    // Do not use NSManagedObject subcalss
+    /*
     NSManagedObject *firstEmployee = results.firstObject;
     
     // Log managed object values
@@ -73,6 +83,7 @@
     NSLog(@"age: %@", [firstEmployee valueForKeyPath:@"age"]);
     NSLog(@"isFreshman: %@", [firstEmployee valueForKeyPath:@"isFreshman"]);
     NSLog(@"startDate: %@", [firstEmployee valueForKeyPath:@"startDate"]);
+     */
     
     if (!results) {
         NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
@@ -89,6 +100,8 @@
 
 - (void)insertNewItem {
     
+    // Do not use NSManagedObject subclass
+    /*
     // insert managed object
     NSManagedObject *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:_context];
     
@@ -97,7 +110,18 @@
     [employee setValue:@(31) forKeyPath:@"age"];
     [employee setValue:@(1) forKeyPath:@"isFreshman"];
     [employee setValue:[NSDate date] forKeyPath:@"startDate"];
+    */
     
+    // Use NSManagedObject subclass
+    // insert managed object
+    Employee *employee = [NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:_context];
+    
+    // assign managed object
+    employee.name = @"Anotny";
+    employee.age = 18;
+    employee.isFreshman = NO;
+    employee.startDate = [NSDate date];
+     
     [self save];
 }
 
