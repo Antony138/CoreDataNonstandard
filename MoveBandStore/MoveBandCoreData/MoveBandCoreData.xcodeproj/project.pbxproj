@@ -13,6 +13,7 @@
 		F49954B51E80D3A1001F0B2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49954B31E80D3A1001F0B2C /* Main.storyboard */; };
 		F49954B71E80D3A1001F0B2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49954B61E80D3A1001F0B2C /* Assets.xcassets */; };
 		F49954BA1E80D3A1001F0B2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49954B81E80D3A1001F0B2C /* LaunchScreen.storyboard */; };
+		F49954C41E80D498001F0B2C /* SPKMoveBandStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954C31E80D498001F0B2C /* SPKMoveBandStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F49954B61E80D3A1001F0B2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F49954B91E80D3A1001F0B2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F49954BB1E80D3A1001F0B2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49954C21E80D498001F0B2C /* SPKMoveBandStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKMoveBandStore.h; sourceTree = "<group>"; };
+		F49954C31E80D498001F0B2C /* SPKMoveBandStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKMoveBandStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +61,9 @@
 		F49954A91E80D3A1001F0B2C /* MoveBandCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F49954AD1E80D3A1001F0B2C /* AppDelegate.h */,
-				F49954AE1E80D3A1001F0B2C /* AppDelegate.m */,
+				F49954C11E80D471001F0B2C /* Model */,
 				F49954B01E80D3A1001F0B2C /* ViewController.h */,
 				F49954B11E80D3A1001F0B2C /* ViewController.m */,
-				F49954B31E80D3A1001F0B2C /* Main.storyboard */,
-				F49954B61E80D3A1001F0B2C /* Assets.xcassets */,
-				F49954B81E80D3A1001F0B2C /* LaunchScreen.storyboard */,
-				F49954BB1E80D3A1001F0B2C /* Info.plist */,
 				F49954AA1E80D3A1001F0B2C /* Supporting Files */,
 			);
 			path = MoveBandCoreData;
@@ -74,9 +72,24 @@
 		F49954AA1E80D3A1001F0B2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F49954AD1E80D3A1001F0B2C /* AppDelegate.h */,
+				F49954AE1E80D3A1001F0B2C /* AppDelegate.m */,
+				F49954B31E80D3A1001F0B2C /* Main.storyboard */,
+				F49954B61E80D3A1001F0B2C /* Assets.xcassets */,
+				F49954B81E80D3A1001F0B2C /* LaunchScreen.storyboard */,
+				F49954BB1E80D3A1001F0B2C /* Info.plist */,
 				F49954AB1E80D3A1001F0B2C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F49954C11E80D471001F0B2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F49954C21E80D498001F0B2C /* SPKMoveBandStore.h */,
+				F49954C31E80D498001F0B2C /* SPKMoveBandStore.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49954C41E80D498001F0B2C /* SPKMoveBandStore.m in Sources */,
 				F49954B21E80D3A1001F0B2C /* ViewController.m in Sources */,
 				F49954AF1E80D3A1001F0B2C /* AppDelegate.m in Sources */,
 				F49954AC1E80D3A1001F0B2C /* main.m in Sources */,

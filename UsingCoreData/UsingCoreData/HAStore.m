@@ -29,12 +29,14 @@
 }
 
 - (void)initializeCoreData {
+    //
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Company" withExtension:@"momd"];
     
     NSManagedObjectModel *mom = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
     NSAssert(mom != nil, @"Error initalizing Managed Object Model");
     
+    //
     NSPersistentStoreCoordinator *psc = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
     
     _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
