@@ -303,6 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H2VAN67H99;
 				INFOPLIST_FILE = MoveBandCoreData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spk.MoveBandCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H2VAN67H99;
 				INFOPLIST_FILE = MoveBandCoreData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spk.MoveBandCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,6 +342,7 @@
 				F49954C01E80D3A1001F0B2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
