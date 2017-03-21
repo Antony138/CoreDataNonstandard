@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "SPKManager.h"
+#import "SPKMoveBandStore.h"
 
 @interface ViewController ()<UITableViewDataSource>
 
@@ -20,7 +22,7 @@
 }
 
 - (IBAction)addNewUser:(UIButton *)sender {
-    
+    [[SPKManager shareManager].store addNewUser];
 }
 
 #pragma mark - UITableViewDataSource

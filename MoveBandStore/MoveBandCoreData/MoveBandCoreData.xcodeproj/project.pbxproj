@@ -17,6 +17,7 @@
 		F49954CA1E8116F1001F0B2C /* MoveBand.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F49954C81E8116F1001F0B2C /* MoveBand.xcdatamodeld */; };
 		F49954DB1E812079001F0B2C /* SPKUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954D81E812079001F0B2C /* SPKUser+CoreDataClass.m */; };
 		F49954DC1E812079001F0B2C /* SPKUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954DA1E812079001F0B2C /* SPKUser+CoreDataProperties.m */; };
+		F49954E21E812D61001F0B2C /* SPKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954E11E812D61001F0B2C /* SPKManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		F49954D81E812079001F0B2C /* SPKUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SPKUser+CoreDataClass.m"; path = "../SPKUser+CoreDataClass.m"; sourceTree = "<group>"; };
 		F49954D91E812079001F0B2C /* SPKUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SPKUser+CoreDataProperties.h"; path = "../SPKUser+CoreDataProperties.h"; sourceTree = "<group>"; };
 		F49954DA1E812079001F0B2C /* SPKUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SPKUser+CoreDataProperties.m"; path = "../SPKUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F49954E01E812D61001F0B2C /* SPKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKManager.h; sourceTree = "<group>"; };
+		F49954E11E812D61001F0B2C /* SPKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 		F49954A91E80D3A1001F0B2C /* MoveBandCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F49954E01E812D61001F0B2C /* SPKManager.h */,
+				F49954E11E812D61001F0B2C /* SPKManager.m */,
 				F49954C11E80D471001F0B2C /* Model */,
 				F49954B01E80D3A1001F0B2C /* ViewController.h */,
 				F49954B11E80D3A1001F0B2C /* ViewController.m */,
@@ -177,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49954E21E812D61001F0B2C /* SPKManager.m in Sources */,
 				F49954CA1E8116F1001F0B2C /* MoveBand.xcdatamodeld in Sources */,
 				F49954DB1E812079001F0B2C /* SPKUser+CoreDataClass.m in Sources */,
 				F49954C41E80D498001F0B2C /* SPKMoveBandStore.m in Sources */,
