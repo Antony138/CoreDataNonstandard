@@ -7,14 +7,10 @@
 //
 
 #import "SPKMoveBandStore.h"
-@import CoreData;
 #import "SPKUser+CoreDataClass.h"
-
-static NSString *kUserEntityName = @"SPKUser";
+#import "SPKPublic.h"
 
 @interface SPKMoveBandStore ()
-
-@property (strong, nonatomic) NSManagedObjectContext *context;
 
 @end
 

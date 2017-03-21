@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@import CoreData;
 
 @interface SPKMoveBandStore : NSObject
+
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 - (void)addNewUser;
 

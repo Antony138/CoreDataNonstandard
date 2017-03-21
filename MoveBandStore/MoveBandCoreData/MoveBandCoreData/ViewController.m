@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "SPKManager.h"
 #import "SPKMoveBandStore.h"
+@import CoreData;
+#import "SPKPublic.h"
 
-@interface ViewController ()<UITableViewDataSource>
+@interface ViewController ()<UITableViewDataSource, NSFetchedResultsControllerDelegate>
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -19,6 +23,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)initializeFetchedResultsController {
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:kUserEntityName];
+    
+    NSSortDescriptor *nameSort = [NSSortDescriptor sortDescriptorWithKey:kUserNameKey ascending:YES];
+    
+    [request setSortDescriptors:@[nameSort]];
+    
+    [self setFetchedResultsController:[[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:[SPKManager shareManager].store.context sectionNameKeyPath:nil cacheName:nil]];
+
+    [self.fetchedResultsController setDelegate:self];
+    
+    NSError *error = nil;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        NSLog(@"Failed to initialize FetchedResultsController: %@\n%@", [error localizedDescription], [error userInfo]);
+        abort();
+    }
 }
 
 - (IBAction)addNewUser:(UIButton *)sender {

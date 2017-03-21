@@ -40,6 +40,7 @@
 		F49954DA1E812079001F0B2C /* SPKUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SPKUser+CoreDataProperties.m"; path = "../SPKUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F49954E01E812D61001F0B2C /* SPKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKManager.h; sourceTree = "<group>"; };
 		F49954E11E812D61001F0B2C /* SPKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKManager.m; sourceTree = "<group>"; };
+		F49954E31E812F2A001F0B2C /* SPKPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPKPublic.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 			children = (
 				F49954E01E812D61001F0B2C /* SPKManager.h */,
 				F49954E11E812D61001F0B2C /* SPKManager.m */,
+				F49954E31E812F2A001F0B2C /* SPKPublic.h */,
 				F49954C11E80D471001F0B2C /* Model */,
 				F49954B01E80D3A1001F0B2C /* ViewController.h */,
 				F49954B11E80D3A1001F0B2C /* ViewController.m */,
