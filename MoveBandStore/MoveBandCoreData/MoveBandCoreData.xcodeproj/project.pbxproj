@@ -15,6 +15,7 @@
 		F49954BA1E80D3A1001F0B2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49954B81E80D3A1001F0B2C /* LaunchScreen.storyboard */; };
 		F49954C41E80D498001F0B2C /* SPKMoveBandStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954C31E80D498001F0B2C /* SPKMoveBandStore.m */; };
 		F49954C71E810EF7001F0B2C /* SPKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954C61E810EF7001F0B2C /* SPKUser.m */; };
+		F49954CA1E8116F1001F0B2C /* MoveBand.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F49954C81E8116F1001F0B2C /* MoveBand.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F49954C31E80D498001F0B2C /* SPKMoveBandStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKMoveBandStore.m; sourceTree = "<group>"; };
 		F49954C51E810EF7001F0B2C /* SPKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKUser.h; sourceTree = "<group>"; };
 		F49954C61E810EF7001F0B2C /* SPKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKUser.m; sourceTree = "<group>"; };
+		F49954C91E8116F1001F0B2C /* MoveBand.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoveBand.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				F49954C31E80D498001F0B2C /* SPKMoveBandStore.m */,
 				F49954C51E810EF7001F0B2C /* SPKUser.h */,
 				F49954C61E810EF7001F0B2C /* SPKUser.m */,
+				F49954C81E8116F1001F0B2C /* MoveBand.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F49954C71E810EF7001F0B2C /* SPKUser.m in Sources */,
+				F49954CA1E8116F1001F0B2C /* MoveBand.xcdatamodeld in Sources */,
 				F49954C41E80D498001F0B2C /* SPKMoveBandStore.m in Sources */,
 				F49954B21E80D3A1001F0B2C /* ViewController.m in Sources */,
 				F49954AF1E80D3A1001F0B2C /* AppDelegate.m in Sources */,
@@ -332,6 +336,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F49954C81E8116F1001F0B2C /* MoveBand.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F49954C91E8116F1001F0B2C /* MoveBand.xcdatamodel */,
+			);
+			currentVersion = F49954C91E8116F1001F0B2C /* MoveBand.xcdatamodel */;
+			path = MoveBand.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F499549F1E80D3A1001F0B2C /* Project object */;
 }
