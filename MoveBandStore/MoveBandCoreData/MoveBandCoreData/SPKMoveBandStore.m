@@ -63,6 +63,8 @@
     newUser.userID = 9009;
     newUser.isFirstLogin = YES;
     newUser.isWholeProfile = NO;
+    
+//    [self save];
 }
 
 - (void)save {

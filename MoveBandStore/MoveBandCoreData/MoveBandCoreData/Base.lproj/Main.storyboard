@@ -47,6 +47,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ECm-U2-xqq" secondAttribute="bottom" id="vH8-RU-Qcb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ECm-U2-xqq" id="8Dp-cZ-V1C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
