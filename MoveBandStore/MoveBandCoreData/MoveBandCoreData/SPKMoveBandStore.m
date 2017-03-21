@@ -8,6 +8,9 @@
 
 #import "SPKMoveBandStore.h"
 @import CoreData;
+#import "SPKUser+CoreDataClass.h"
+
+static NSString *kUserEntityName = @"SPKUser";
 
 @interface SPKMoveBandStore ()
 
@@ -55,6 +58,22 @@
         NSPersistentStore *store = [psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error];
         NSAssert(store != nil, @"Error initializing PSC: %@\n%@", [error localizedDescription], [error userInfo]);
     });
+}
+
+- (void)addNewUser {
+    SPKUser *newUser = [NSEntityDescription insertNewObjectForEntityForName:kUserEntityName inManagedObjectContext:_context];
+    
+    newUser.userName = @"Eason";
+    newUser.userID = 9009;
+    newUser.isFirstLogin = YES;
+    newUser.isWholeProfile = NO;
+}
+
+- (void)save {
+    NSError *error = nil;
+    if ([_context save:&error] == NO) {
+        NSAssert(NO, @"Error saving context %@\n%@", [error localizedDescription], [error userInfo]);
+    }
 }
 
 @end

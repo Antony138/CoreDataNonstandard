@@ -10,4 +10,8 @@
 
 @interface SPKMoveBandStore : NSObject
 
+- (void)addNewUser;
+
+- (void)save;
+
 @end
