@@ -13,5 +13,6 @@
 @dynamic age;
 @dynamic isFreshman;
 @dynamic startDate;
+@dynamic eq;
 
 @end

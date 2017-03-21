@@ -9,6 +9,7 @@
 #import "HAStore.h"
 #import "HAEmployee.h"
 @import CoreData;
+#import "HAEq.h"
 
 @interface HAStore ()
 
@@ -73,6 +74,8 @@
     NSLog(@"age: %@", @(firstEmployee.age));
     NSLog(@"isFreshman: %@", @(firstEmployee.isFreshman));
     NSLog(@"startDate: %@", firstEmployee.startDate);
+    NSLog(@"kHz8:%@", @(firstEmployee.eq.kHz8));
+    NSLog(@"kHz16:%@", @(firstEmployee.eq.kHz16));
     
     // Do not use NSManagedObject subcalss
     /*
@@ -121,7 +124,9 @@
     employee.age = 18;
     employee.isFreshman = NO;
     employee.startDate = [NSDate date];
-     
+    employee.eq = [[HAEq alloc] init];
+    
+    
     [self save];
 }
 

@@ -18,6 +18,8 @@
 		0AAF4D1B1E72E56C004B62FD /* HAStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4D1A1E72E56C004B62FD /* HAStore.m */; };
 		0AAF4D1F1E72E68D004B62FD /* Company.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF4D1D1E72E68D004B62FD /* Company.xcdatamodeld */; };
 		F43966A51E73C62000D838ED /* HAEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = F43966A41E73C62000D838ED /* HAEmployee.m */; };
+		F43966B11E7682DA00D838ED /* HAEq.m in Sources */ = {isa = PBXBuildFile; fileRef = F43966B01E7682DA00D838ED /* HAEq.m */; };
+		F43966B41E76846900D838ED /* HAEqTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F43966B31E76846900D838ED /* HAEqTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,11 @@
 		0AAF4D1E1E72E68D004B62FD /* Company.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Company.xcdatamodel; sourceTree = "<group>"; };
 		F43966A31E73C62000D838ED /* HAEmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAEmployee.h; sourceTree = "<group>"; };
 		F43966A41E73C62000D838ED /* HAEmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAEmployee.m; sourceTree = "<group>"; };
+		F43966AF1E7682DA00D838ED /* HAEq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAEq.h; sourceTree = "<group>"; };
+		F43966B01E7682DA00D838ED /* HAEq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAEq.m; sourceTree = "<group>"; };
+		F43966B21E76846900D838ED /* HAEqTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAEqTransformer.h; sourceTree = "<group>"; };
+		F43966B31E76846900D838ED /* HAEqTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAEqTransformer.m; sourceTree = "<group>"; };
+		F4959A7A1E7A841A0064152A /* Version0.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Version0.1.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +172,10 @@
 				0AAF4D1D1E72E68D004B62FD /* Company.xcdatamodeld */,
 				F43966A31E73C62000D838ED /* HAEmployee.h */,
 				F43966A41E73C62000D838ED /* HAEmployee.m */,
+				F43966AF1E7682DA00D838ED /* HAEq.h */,
+				F43966B01E7682DA00D838ED /* HAEq.m */,
+				F43966B21E76846900D838ED /* HAEqTransformer.h */,
+				F43966B31E76846900D838ED /* HAEqTransformer.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -308,8 +319,10 @@
 				0AAF4D1F1E72E68D004B62FD /* Company.xcdatamodeld in Sources */,
 				0AAF4CED1E72E504004B62FD /* ViewController.m in Sources */,
 				F43966A51E73C62000D838ED /* HAEmployee.m in Sources */,
+				F43966B11E7682DA00D838ED /* HAEq.m in Sources */,
 				0AAF4CEA1E72E504004B62FD /* AppDelegate.m in Sources */,
 				0AAF4D1B1E72E56C004B62FD /* HAStore.m in Sources */,
+				F43966B41E76846900D838ED /* HAEqTransformer.m in Sources */,
 				0AAF4CE71E72E504004B62FD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +589,7 @@
 		0AAF4D1D1E72E68D004B62FD /* Company.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F4959A7A1E7A841A0064152A /* Version0.1.xcdatamodel */,
 				0AAF4D1E1E72E68D004B62FD /* Company.xcdatamodel */,
 			);
 			currentVersion = 0AAF4D1E1E72E68D004B62FD /* Company.xcdatamodel */;

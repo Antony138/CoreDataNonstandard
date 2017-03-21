@@ -7,6 +7,7 @@
 //
 
 #import <CoreData/CoreData.h>
+@class HAEq;
 
 // 自定义的NSManagedObject的子类名称,不一定要和实体(Entity)的名称一致
 @interface HAEmployee : NSManagedObject
@@ -19,5 +20,7 @@
 @property (nonatomic) BOOL isFreshman;
 
 @property (copy ,nonatomic) NSDate *startDate;
+
+@property (strong, nonatomic) HAEq *eq;
 
 @end
