@@ -12,11 +12,14 @@
 @import CoreData;
 #import "SPKPublic.h"
 #import "SPKUser+CoreDataClass.h"
+#import "SPKDetailViewController.h"
 
-@interface ViewController ()<UITableViewDataSource, NSFetchedResultsControllerDelegate>
+@interface ViewController ()<UITableViewDataSource, NSFetchedResultsControllerDelegate, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
+@property (strong, nonatomic) SPKUser *selectedUser;
 
 @end
 
@@ -76,6 +79,12 @@
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", @(user.userID)];
 }
 
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedUser = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"ShowDetails" sender:self];
+}
+
 #pragma mark - NSFetchedResultsControllerDelegate
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller{
     [_tableView beginUpdates];
@@ -129,5 +138,20 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [_tableView endUpdates];
 }
+
+ #pragma mark - Navigation
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+     
+     if ([[segue identifier] isEqualToString:@"ShowDetails"])
+     {
+         SPKDetailViewController *detailViewController =
+         [segue destinationViewController];
+         
+         detailViewController.selectedUser = self.selectedUser;
+     }
+ }
 
 @end

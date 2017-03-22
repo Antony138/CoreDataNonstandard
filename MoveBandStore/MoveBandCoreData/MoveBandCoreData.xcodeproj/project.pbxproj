@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F45A7AFD1E82613B00E699A3 /* SPKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45A7AFC1E82613B00E699A3 /* SPKDetailViewController.m */; };
+		F45A7B261E82784E00E699A3 /* SPKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45A7B251E82784E00E699A3 /* SPKDetailViewController.m */; };
 		F49954AC1E80D3A1001F0B2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954AB1E80D3A1001F0B2C /* main.m */; };
 		F49954AF1E80D3A1001F0B2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954AE1E80D3A1001F0B2C /* AppDelegate.m */; };
 		F49954B21E80D3A1001F0B2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954B11E80D3A1001F0B2C /* ViewController.m */; };
@@ -24,8 +24,8 @@
 /* Begin PBXFileReference section */
 		F45A7AF01E825C0100E699A3 /* MoveBand 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MoveBand 2.xcdatamodel"; sourceTree = "<group>"; };
 		F45A7AF61E825FE000E699A3 /* MoveBand 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MoveBand 3.xcdatamodel"; sourceTree = "<group>"; };
-		F45A7AFB1E82613B00E699A3 /* SPKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKDetailViewController.h; sourceTree = "<group>"; };
-		F45A7AFC1E82613B00E699A3 /* SPKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKDetailViewController.m; sourceTree = "<group>"; };
+		F45A7B241E82784E00E699A3 /* SPKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPKDetailViewController.h; sourceTree = "<group>"; };
+		F45A7B251E82784E00E699A3 /* SPKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPKDetailViewController.m; sourceTree = "<group>"; };
 		F49954A71E80D3A1001F0B2C /* MoveBandCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveBandCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49954AB1E80D3A1001F0B2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F49954AD1E80D3A1001F0B2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,8 +64,8 @@
 			children = (
 				F49954B01E80D3A1001F0B2C /* ViewController.h */,
 				F49954B11E80D3A1001F0B2C /* ViewController.m */,
-				F45A7AFB1E82613B00E699A3 /* SPKDetailViewController.h */,
-				F45A7AFC1E82613B00E699A3 /* SPKDetailViewController.m */,
+				F45A7B241E82784E00E699A3 /* SPKDetailViewController.h */,
+				F45A7B251E82784E00E699A3 /* SPKDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45A7B261E82784E00E699A3 /* SPKDetailViewController.m in Sources */,
 				F49954E21E812D61001F0B2C /* SPKManager.m in Sources */,
 				F49954CA1E8116F1001F0B2C /* MoveBand.xcdatamodeld in Sources */,
 				F49954DB1E812079001F0B2C /* SPKUser+CoreDataClass.m in Sources */,
@@ -207,7 +208,6 @@
 				F49954AF1E80D3A1001F0B2C /* AppDelegate.m in Sources */,
 				F49954AC1E80D3A1001F0B2C /* main.m in Sources */,
 				F49954DC1E812079001F0B2C /* SPKUser+CoreDataProperties.m in Sources */,
-				F45A7AFD1E82613B00E699A3 /* SPKDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

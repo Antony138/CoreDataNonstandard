@@ -1,5 +1,5 @@
 //
-//  SPKDetalViewController.h
+//  SPKDetailViewController.h
 //  MoveBandCoreData
 //
 //  Created by SPK_Antony on 22/03/2017.
@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SPKUser;
 
 @interface SPKDetailViewController : UIViewController
+
+@property (strong, nonatomic) SPKUser *selectedUser;
 
 @end
