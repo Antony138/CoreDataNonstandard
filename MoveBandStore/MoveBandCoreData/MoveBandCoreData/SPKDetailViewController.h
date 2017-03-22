@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) SPKUser *selectedUser;
 
+@property (nonatomic, copy) void (^dismissBlock)(void);
+
 @end

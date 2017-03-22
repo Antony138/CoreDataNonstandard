@@ -151,6 +151,10 @@
          [segue destinationViewController];
          
          detailViewController.selectedUser = self.selectedUser;
+         
+         detailViewController.dismissBlock = ^{
+             [self.tableView reloadData];
+         };
      }
  }
 

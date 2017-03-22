@@ -9,7 +9,7 @@
 #import "SPKDetailViewController.h"
 #import "SPKUser+CoreDataClass.h"
 
-@interface SPKDetailViewController ()
+@interface SPKDetailViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *idTextField;
 @property (weak, nonatomic) IBOutlet UITextField *weightTextField;
@@ -29,13 +29,25 @@
     _emailTextField.text  = _selectedUser.userEmailAccount;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    // Clear first responder
+    [self.view endEditing:YES];
+    
+    // 为什么要写这部分代码, Core Data才能保存数据？
+    // "Save" changes to item
+    SPKUser *user = self.selectedUser;
+    user.userName = _nameTextField.text;
+    user.userID = _idTextField.text.intValue;
+    user.userWeight = _weightTextField.text.intValue;
+    user.userHeight = _heightTextField.text.intValue;
+    user.userEmailAccount = _emailTextField.text;
 }
 
 - (IBAction)saveAndBack:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:self.dismissBlock];
 }
 
 @end
