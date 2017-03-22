@@ -49,9 +49,17 @@
     
     // Create persistent store
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                                 [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+                                 [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
         NSError *error = nil;
         NSPersistentStoreCoordinator *psc = _context.persistentStoreCoordinator;
-        NSPersistentStore *store = [psc addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error];
+        NSPersistentStore *store = [psc addPersistentStoreWithType:NSSQLiteStoreType
+                                                     configuration:nil
+                                                               URL:storeURL
+                                                           options:options
+                                                             error:&error];
         NSAssert(store != nil, @"Error initializing PSC: %@\n%@", [error localizedDescription], [error userInfo]);
     });
 }

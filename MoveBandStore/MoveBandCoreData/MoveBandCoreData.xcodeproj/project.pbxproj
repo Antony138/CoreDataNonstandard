@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F45A7AF01E825C0100E699A3 /* MoveBand 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MoveBand 2.xcdatamodel"; sourceTree = "<group>"; };
 		F49954A71E80D3A1001F0B2C /* MoveBandCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveBandCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49954AB1E80D3A1001F0B2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F49954AD1E80D3A1001F0B2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -358,9 +359,10 @@
 		F49954C81E8116F1001F0B2C /* MoveBand.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F45A7AF01E825C0100E699A3 /* MoveBand 2.xcdatamodel */,
 				F49954C91E8116F1001F0B2C /* MoveBand.xcdatamodel */,
 			);
-			currentVersion = F49954C91E8116F1001F0B2C /* MoveBand.xcdatamodel */;
+			currentVersion = F45A7AF01E825C0100E699A3 /* MoveBand 2.xcdatamodel */;
 			path = MoveBand.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
