@@ -49,8 +49,19 @@
     }
 }
 
+# pragma mark - Add & Edit
 - (IBAction)addNewUser:(UIButton *)sender {
     [[SPKManager shareManager].store addNewUser];
+}
+
+- (IBAction)edit:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if (sender.selected == YES) {
+        _tableView.editing = YES;
+    }
+    else {
+        _tableView.editing = NO;
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -83,6 +94,19 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedUser = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [self performSegueWithIdentifier:@"ShowDetails" sender:self];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        // Remove from Core Data Stack
+        [[SPKManager shareManager].store removeUser:[_fetchedResultsController objectAtIndexPath:indexPath]];
+        
+        // Remove row from UI
+        /*
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+         */
+    }
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate

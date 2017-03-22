@@ -75,6 +75,10 @@
 //    [self save];
 }
 
+- (void)removeUser:(SPKUser *)user {
+    [_context deleteObject:user];
+}
+
 - (void)save {
     NSError *error = nil;
     if ([_context save:&error] == NO) {

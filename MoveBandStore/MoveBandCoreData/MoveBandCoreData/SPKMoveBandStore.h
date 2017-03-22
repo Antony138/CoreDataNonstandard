@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 @import CoreData;
+@class SPKUser;
 
 @interface SPKMoveBandStore : NSObject
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
 - (void)addNewUser;
+
+- (void)removeUser:(SPKUser *)user;
 
 - (void)save;
 

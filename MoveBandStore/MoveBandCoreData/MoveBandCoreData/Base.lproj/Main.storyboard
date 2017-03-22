@@ -37,15 +37,24 @@
                                     <action selector="addNewUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7r-1j-cxc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oai-0D-YYZ">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="edit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kYr-Fw-5uw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Oai-0D-YYZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5eX-x3-sVT"/>
                             <constraint firstAttribute="trailing" secondItem="ECm-U2-xqq" secondAttribute="trailing" id="Jr2-wr-FT1"/>
                             <constraint firstItem="ECm-U2-xqq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="KAM-L0-F7k"/>
                             <constraint firstItem="ECm-U2-xqq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KXX-PB-aUQ"/>
                             <constraint firstAttribute="trailing" secondItem="xem-Hp-sBX" secondAttribute="trailing" constant="8" id="t0B-az-OTc"/>
                             <constraint firstItem="xem-Hp-sBX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uEN-hM-CFU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ECm-U2-xqq" secondAttribute="bottom" id="vH8-RU-Qcb"/>
+                            <constraint firstItem="Oai-0D-YYZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vWr-SR-INE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="P6o-Rg-O59"/>
