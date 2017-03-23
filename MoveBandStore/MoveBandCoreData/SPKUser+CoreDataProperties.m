@@ -2,7 +2,7 @@
 //  SPKUser+CoreDataProperties.m
 //  MoveBandCoreData
 //
-//  Created by SPK_Antony on 22/03/2017.
+//  Created by SPK_Antony on 23/03/2017.
 //  Copyright © 2017 Spark Technology Inc. All rights reserved.
 //
 
@@ -28,6 +28,7 @@
 @dynamic userBirthdayTimeStamp;
 @dynamic userEmailAccount;
 @dynamic userGoalCalories;
+@dynamic userGoalDistence;
 @dynamic userGoalDuration;
 @dynamic userGoalSteps;
 @dynamic userHeight;
@@ -37,6 +38,6 @@
 @dynamic userPhotoKey;
 @dynamic userPhotoMD5Value;
 @dynamic userWeight;
-@dynamic userGoalDistence;
+@dynamic userGender;
 
 @end

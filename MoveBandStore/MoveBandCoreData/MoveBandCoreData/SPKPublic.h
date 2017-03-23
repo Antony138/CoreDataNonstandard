@@ -15,3 +15,10 @@
 static NSString *kUserEntityName = @"SPKUser";
 
 static NSString *kUserNameKey = @"userName";
+
+// 性别
+typedef NS_ENUM (int16_t, UserGenderType) {
+    UserGenderType_Male   = 0x00,
+    UserGenderType_Female = 0x01,
+    UserGenderType_unknow = 0x02,
+};

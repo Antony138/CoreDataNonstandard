@@ -2,12 +2,12 @@
 //  SPKUser+CoreDataProperties.h
 //  MoveBandCoreData
 //
-//  Created by SPK_Antony on 22/03/2017.
+//  Created by SPK_Antony on 23/03/2017.
 //  Copyright © 2017 Spark Technology Inc. All rights reserved.
 //
 
 #import "SPKUser+CoreDataClass.h"
-
+#import "SPKPublic.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int16_t userBirthdayTimeStamp;
 @property (nullable, nonatomic, copy) NSString *userEmailAccount;
 @property (nonatomic) int16_t userGoalCalories;
+@property (nonatomic) int16_t userGoalDistence;
 @property (nonatomic) int16_t userGoalDuration;
 @property (nonatomic) int16_t userGoalSteps;
 @property (nonatomic) int16_t userHeight;
@@ -38,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *userPhotoKey;
 @property (nullable, nonatomic, copy) NSString *userPhotoMD5Value;
 @property (nonatomic) int16_t userWeight;
-@property (nonatomic) int16_t userGoalDistence;
+@property (nonatomic) UserGenderType userGender;
 
 @end
 

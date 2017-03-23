@@ -34,6 +34,8 @@
 - (void)initializeFetchedResultsController {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:kUserEntityName];
     
+    // 返回数据的排序规则(最少需要有一个sort descriptor)
+    // Need at least one sort descriptor
     NSSortDescriptor *nameSort = [NSSortDescriptor sortDescriptorWithKey:kUserNameKey ascending:YES];
     
     [request setSortDescriptors:@[nameSort]];

@@ -25,7 +25,15 @@
     _nameTextField.text   = _selectedUser.userName;
     _idTextField.text     = [NSString stringWithFormat:@"%@", @(_selectedUser.userID)];
     _weightTextField.text = [NSString stringWithFormat:@"%@", @(_selectedUser.userWeight)];
-    _heightTextField.text = [NSString stringWithFormat:@"%@", @(_selectedUser.userHeight)];
+    if (_selectedUser.userGender == UserGenderType_Male) {
+        _heightTextField.text = @"Man";
+    }
+    else if (_selectedUser.userGender == UserGenderType_Female) {
+        _heightTextField.text = @"Woman";
+    }
+    else {
+        _heightTextField.text = @"Unknow";
+    }
     _emailTextField.text  = _selectedUser.userEmailAccount;
 }
 
@@ -41,7 +49,15 @@
     self.selectedUser.userName         = _nameTextField.text;
     self.selectedUser.userID           = _idTextField.text.intValue;
     self.selectedUser.userWeight       = _weightTextField.text.intValue;
-    self.selectedUser.userHeight       = _heightTextField.text.intValue;
+    if ([_heightTextField.text isEqualToString:@"Man"]) {
+        self.selectedUser.userGender = UserGenderType_Male;
+    }
+    else if ([_heightTextField.text isEqualToString:@"Woman"]) {
+        self.selectedUser.userGender = UserGenderType_Female;
+    }
+    else {
+        self.selectedUser.userGender = UserGenderType_unknow;
+    }
     self.selectedUser.userEmailAccount = _emailTextField.text;
 }
 
