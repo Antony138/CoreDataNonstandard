@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSDate *userBirthdayDate;
 @property (nonatomic) int16_t userBirthdayTimeStamp;
 @property (nullable, nonatomic, copy) NSString *userEmailAccount;
+@property (nonatomic) UserGenderType userGender;
 @property (nonatomic) int16_t userGoalCalories;
 @property (nonatomic) int16_t userGoalDistence;
 @property (nonatomic) int16_t userGoalDuration;
@@ -39,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *userPhotoKey;
 @property (nullable, nonatomic, copy) NSString *userPhotoMD5Value;
 @property (nonatomic) int16_t userWeight;
-@property (nonatomic) UserGenderType userGender;
+@property (nullable, nonatomic, retain) NSMutableArray *allHistoryDataPackets;
 
 @end
 

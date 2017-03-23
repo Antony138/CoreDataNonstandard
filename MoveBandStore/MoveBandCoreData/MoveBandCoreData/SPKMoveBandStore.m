@@ -67,6 +67,9 @@
 - (SPKUser *)addNewUser {
     SPKUser *newUser = [NSEntityDescription insertNewObjectForEntityForName:kUserEntityName inManagedObjectContext:_context];
     
+    // Test
+    newUser.allHistoryDataPackets = [NSMutableArray arrayWithObjects:@"123", @"234", @"456", nil];
+    
 //    [self save];
     
     return newUser;

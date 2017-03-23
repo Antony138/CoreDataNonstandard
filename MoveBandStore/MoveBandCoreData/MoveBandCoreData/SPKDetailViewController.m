@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view.
     _nameTextField.text   = _selectedUser.userName;
     _idTextField.text     = [NSString stringWithFormat:@"%@", @(_selectedUser.userID)];
-    _weightTextField.text = [NSString stringWithFormat:@"%@", @(_selectedUser.userWeight)];
+    _weightTextField.text = [NSString stringWithFormat:@"元素个数: %@", @(_selectedUser.allHistoryDataPackets.count)];
     if (_selectedUser.userGender == UserGenderType_Male) {
         _heightTextField.text = @"Man";
     }

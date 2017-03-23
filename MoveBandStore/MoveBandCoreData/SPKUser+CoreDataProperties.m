@@ -27,6 +27,7 @@
 @dynamic userBirthdayDate;
 @dynamic userBirthdayTimeStamp;
 @dynamic userEmailAccount;
+@dynamic userGender;
 @dynamic userGoalCalories;
 @dynamic userGoalDistence;
 @dynamic userGoalDuration;
@@ -38,6 +39,6 @@
 @dynamic userPhotoKey;
 @dynamic userPhotoMD5Value;
 @dynamic userWeight;
-@dynamic userGender;
+@dynamic allHistoryDataPackets;
 
 @end
