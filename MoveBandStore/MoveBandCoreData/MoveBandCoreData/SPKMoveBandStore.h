@@ -14,7 +14,9 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
-- (void)addNewUser;
+// 这里返回SPKUser, 是为了传递给其他页面, 以便进行赋值
+// pass SPKUser to other controllers for assign value
+- (SPKUser *)addNewUser;
 
 - (void)removeUser:(SPKUser *)user;
 

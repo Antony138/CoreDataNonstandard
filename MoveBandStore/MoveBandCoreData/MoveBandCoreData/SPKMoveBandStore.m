@@ -64,15 +64,12 @@
     });
 }
 
-- (void)addNewUser {
+- (SPKUser *)addNewUser {
     SPKUser *newUser = [NSEntityDescription insertNewObjectForEntityForName:kUserEntityName inManagedObjectContext:_context];
     
-    newUser.userName = @"Eason";
-    newUser.userID = 9009;
-    newUser.isFirstLogin = YES;
-    newUser.isWholeProfile = NO;
-    
 //    [self save];
+    
+    return newUser;
 }
 
 - (void)removeUser:(SPKUser *)user {

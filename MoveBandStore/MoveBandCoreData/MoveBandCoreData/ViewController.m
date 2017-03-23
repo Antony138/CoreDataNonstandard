@@ -51,7 +51,11 @@
 
 # pragma mark - Add & Edit
 - (IBAction)addNewUser:(UIButton *)sender {
-    [[SPKManager shareManager].store addNewUser];
+    SPKUser *newUser = [[SPKManager shareManager].store addNewUser];
+    
+    self.selectedUser = newUser;
+    
+    [self performSegueWithIdentifier:@"ShowDetails" sender:self];
 }
 
 - (IBAction)edit:(UIButton *)sender {

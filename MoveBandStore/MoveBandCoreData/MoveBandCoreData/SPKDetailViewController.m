@@ -38,12 +38,11 @@
     
     // 为什么要写这部分代码, Core Data才能保存数据？
     // "Save" changes to item
-    SPKUser *user = self.selectedUser;
-    user.userName = _nameTextField.text;
-    user.userID = _idTextField.text.intValue;
-    user.userWeight = _weightTextField.text.intValue;
-    user.userHeight = _heightTextField.text.intValue;
-    user.userEmailAccount = _emailTextField.text;
+    self.selectedUser.userName         = _nameTextField.text;
+    self.selectedUser.userID           = _idTextField.text.intValue;
+    self.selectedUser.userWeight       = _weightTextField.text.intValue;
+    self.selectedUser.userHeight       = _heightTextField.text.intValue;
+    self.selectedUser.userEmailAccount = _emailTextField.text;
 }
 
 - (IBAction)saveAndBack:(UIButton *)sender {
