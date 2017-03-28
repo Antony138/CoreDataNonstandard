@@ -9,6 +9,7 @@
 #import "SPKMoveBandStore.h"
 #import "SPKUser+CoreDataClass.h"
 #import "SPKPublic.h"
+#import "SPKPackets+CoreDataClass.h"
 
 @interface SPKMoveBandStore ()
 
@@ -69,6 +70,14 @@
     
     // Test
     newUser.allHistoryDataPackets = [NSMutableArray arrayWithObjects:@"123", @"234", @"456", nil];
+    
+    for (int i = 0; i < 5; i++) {
+        SPKPackets *packet = [NSEntityDescription insertNewObjectForEntityForName:kPacketEntityName inManagedObjectContext:_context];
+        packet.steps = 99 + i;
+        packet.calories = 555 + i;
+
+        [newUser addAllPacketsObject:packet];
+    }
     
 //    [self save];
     

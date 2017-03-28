@@ -2,7 +2,7 @@
 //  SPKUser+CoreDataProperties.m
 //  MoveBandCoreData
 //
-//  Created by SPK_Antony on 23/03/2017.
+//  Created by SPK_Antony on 28/03/2017.
 //  Copyright © 2017 Spark Technology Inc. All rights reserved.
 //
 
@@ -14,6 +14,7 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"SPKUser"];
 }
 
+@dynamic allHistoryDataPackets;
 @dynamic isFirstLogin;
 @dynamic isLogined;
 @dynamic isShouldAutoLogin;
@@ -39,6 +40,6 @@
 @dynamic userPhotoKey;
 @dynamic userPhotoMD5Value;
 @dynamic userWeight;
-@dynamic allHistoryDataPackets;
+@dynamic allPackets;
 
 @end

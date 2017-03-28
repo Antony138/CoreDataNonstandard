@@ -2,11 +2,12 @@
 //  SPKUser+CoreDataProperties.h
 //  MoveBandCoreData
 //
-//  Created by SPK_Antony on 23/03/2017.
+//  Created by SPK_Antony on 28/03/2017.
 //  Copyright © 2017 Spark Technology Inc. All rights reserved.
 //
 
 #import "SPKUser+CoreDataClass.h"
+#import "SPKPackets+CoreDataClass.h"
 #import "SPKPublic.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -15,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<SPKUser *> *)fetchRequest;
 
+@property (nullable, nonatomic, retain) NSMutableArray *allHistoryDataPackets;
 @property (nonatomic) BOOL isFirstLogin;
 @property (nonatomic) BOOL isLogined;
 @property (nonatomic) BOOL isShouldAutoLogin;
@@ -40,7 +42,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *userPhotoKey;
 @property (nullable, nonatomic, copy) NSString *userPhotoMD5Value;
 @property (nonatomic) int16_t userWeight;
-@property (nullable, nonatomic, retain) NSMutableArray *allHistoryDataPackets;
+@property (nullable, nonatomic, retain) NSSet<SPKPackets *> *allPackets;
+
+@end
+
+@interface SPKUser (CoreDataGeneratedAccessors)
+
+- (void)addAllPacketsObject:(SPKPackets *)value;
+- (void)removeAllPacketsObject:(SPKPackets *)value;
+- (void)addAllPackets:(NSSet<SPKPackets *> *)values;
+- (void)removeAllPackets:(NSSet<SPKPackets *> *)values;
 
 @end
 
