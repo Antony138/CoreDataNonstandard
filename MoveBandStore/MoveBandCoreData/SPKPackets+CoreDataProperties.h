@@ -26,7 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int32_t sleep;
 @property (nonatomic) int32_t startTimeStamp;
 @property (nonatomic) int32_t steps;
-@property (nullable, nonatomic, retain) SPKUser *owner;
 
 @end
 

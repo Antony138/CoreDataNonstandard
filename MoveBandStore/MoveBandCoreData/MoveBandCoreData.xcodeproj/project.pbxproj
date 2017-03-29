@@ -36,6 +36,7 @@
 		F49015491E8A62F0001E097C /* SPKPackets+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SPKPackets+CoreDataProperties.h"; path = "../SPKPackets+CoreDataProperties.h"; sourceTree = "<group>"; };
 		F490154A1E8A62F0001E097C /* SPKPackets+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SPKPackets+CoreDataProperties.m"; path = "../SPKPackets+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F49015631E8BAABA001E097C /* MoveBand 7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MoveBand 7.xcdatamodel"; sourceTree = "<group>"; };
+		F49015711E8BB2A0001E097C /* MoveBand 8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MoveBand 8.xcdatamodel"; sourceTree = "<group>"; };
 		F49954A71E80D3A1001F0B2C /* MoveBandCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveBandCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49954AB1E80D3A1001F0B2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F49954AD1E80D3A1001F0B2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -390,6 +391,7 @@
 		F49954C81E8116F1001F0B2C /* MoveBand.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F49015711E8BB2A0001E097C /* MoveBand 8.xcdatamodel */,
 				F49015631E8BAABA001E097C /* MoveBand 7.xcdatamodel */,
 				F490153D1E8A6101001E097C /* MoveBand 6.xcdatamodel */,
 				F41EEADA1E83F2750006ADA0 /* MoveBand 5.xcdatamodel */,
@@ -398,7 +400,7 @@
 				F45A7AF01E825C0100E699A3 /* MoveBand 2.xcdatamodel */,
 				F49954C91E8116F1001F0B2C /* MoveBand.xcdatamodel */,
 			);
-			currentVersion = F49015631E8BAABA001E097C /* MoveBand 7.xcdatamodel */;
+			currentVersion = F49015711E8BB2A0001E097C /* MoveBand 8.xcdatamodel */;
 			path = MoveBand.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

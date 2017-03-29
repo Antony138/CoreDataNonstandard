@@ -25,6 +25,5 @@
 @dynamic sleep;
 @dynamic startTimeStamp;
 @dynamic steps;
-@dynamic owner;
 
 @end
