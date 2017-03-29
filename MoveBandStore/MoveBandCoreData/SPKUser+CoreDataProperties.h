@@ -2,7 +2,7 @@
 //  SPKUser+CoreDataProperties.h
 //  MoveBandCoreData
 //
-//  Created by SPK_Antony on 28/03/2017.
+//  Created by SPK_Antony on 29/03/2017.
 //  Copyright © 2017 Spark Technology Inc. All rights reserved.
 //
 
@@ -42,16 +42,22 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *userPhotoKey;
 @property (nullable, nonatomic, copy) NSString *userPhotoMD5Value;
 @property (nonatomic) int16_t userWeight;
-@property (nullable, nonatomic, retain) NSSet<SPKPackets *> *allPackets;
+@property (nullable, nonatomic, retain) NSOrderedSet<SPKPackets *> *allPackets;
 
 @end
 
 @interface SPKUser (CoreDataGeneratedAccessors)
 
+- (void)insertObject:(SPKPackets *)value inAllPacketsAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromAllPacketsAtIndex:(NSUInteger)idx;
+- (void)insertAllPackets:(NSArray<SPKPackets *> *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeAllPacketsAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInAllPacketsAtIndex:(NSUInteger)idx withObject:(SPKPackets *)value;
+- (void)replaceAllPacketsAtIndexes:(NSIndexSet *)indexes withAllPackets:(NSArray<SPKPackets *> *)values;
 - (void)addAllPacketsObject:(SPKPackets *)value;
 - (void)removeAllPacketsObject:(SPKPackets *)value;
-- (void)addAllPackets:(NSSet<SPKPackets *> *)values;
-- (void)removeAllPackets:(NSSet<SPKPackets *> *)values;
+- (void)addAllPackets:(NSOrderedSet<SPKPackets *> *)values;
+- (void)removeAllPackets:(NSOrderedSet<SPKPackets *> *)values;
 
 @end
 
