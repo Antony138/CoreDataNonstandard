@@ -10,6 +10,8 @@
 		F45A7B261E82784E00E699A3 /* SPKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45A7B251E82784E00E699A3 /* SPKDetailViewController.m */; };
 		F490154D1E8A62F0001E097C /* SPKPackets+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F49015481E8A62F0001E097C /* SPKPackets+CoreDataClass.m */; };
 		F490154E1E8A62F0001E097C /* SPKPackets+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F490154A1E8A62F0001E097C /* SPKPackets+CoreDataProperties.m */; };
+		F49015B31E8BC7FE001E097C /* SPKDay+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F49015AC1E8BC7FE001E097C /* SPKDay+CoreDataClass.m */; };
+		F49015B41E8BC7FE001E097C /* SPKDay+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F49015AE1E8BC7FE001E097C /* SPKDay+CoreDataProperties.m */; };
 		F49954AC1E80D3A1001F0B2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954AB1E80D3A1001F0B2C /* main.m */; };
 		F49954AF1E80D3A1001F0B2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954AE1E80D3A1001F0B2C /* AppDelegate.m */; };
 		F49954B21E80D3A1001F0B2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49954B11E80D3A1001F0B2C /* ViewController.m */; };
@@ -37,6 +39,11 @@
 		F490154A1E8A62F0001E097C /* SPKPackets+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SPKPackets+CoreDataProperties.m"; path = "../SPKPackets+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F49015631E8BAABA001E097C /* MoveBand 7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MoveBand 7.xcdatamodel"; sourceTree = "<group>"; };
 		F49015711E8BB2A0001E097C /* MoveBand 8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MoveBand 8.xcdatamodel"; sourceTree = "<group>"; };
+		F49015AA1E8BC702001E097C /* MoveBand 9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MoveBand 9.xcdatamodel"; sourceTree = "<group>"; };
+		F49015AB1E8BC7FE001E097C /* SPKDay+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SPKDay+CoreDataClass.h"; path = "../SPKDay+CoreDataClass.h"; sourceTree = "<group>"; };
+		F49015AC1E8BC7FE001E097C /* SPKDay+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SPKDay+CoreDataClass.m"; path = "../SPKDay+CoreDataClass.m"; sourceTree = "<group>"; };
+		F49015AD1E8BC7FE001E097C /* SPKDay+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SPKDay+CoreDataProperties.h"; path = "../SPKDay+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F49015AE1E8BC7FE001E097C /* SPKDay+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SPKDay+CoreDataProperties.m"; path = "../SPKDay+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F49954A71E80D3A1001F0B2C /* MoveBandCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoveBandCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49954AB1E80D3A1001F0B2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F49954AD1E80D3A1001F0B2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +142,10 @@
 				F49015481E8A62F0001E097C /* SPKPackets+CoreDataClass.m */,
 				F49015491E8A62F0001E097C /* SPKPackets+CoreDataProperties.h */,
 				F490154A1E8A62F0001E097C /* SPKPackets+CoreDataProperties.m */,
+				F49015AB1E8BC7FE001E097C /* SPKDay+CoreDataClass.h */,
+				F49015AC1E8BC7FE001E097C /* SPKDay+CoreDataClass.m */,
+				F49015AD1E8BC7FE001E097C /* SPKDay+CoreDataProperties.h */,
+				F49015AE1E8BC7FE001E097C /* SPKDay+CoreDataProperties.m */,
 				F49954C21E80D498001F0B2C /* SPKMoveBandStore.h */,
 				F49954C31E80D498001F0B2C /* SPKMoveBandStore.m */,
 				F49954C81E8116F1001F0B2C /* MoveBand.xcdatamodeld */,
@@ -219,7 +230,9 @@
 				F49954CA1E8116F1001F0B2C /* MoveBand.xcdatamodeld in Sources */,
 				F49954DB1E812079001F0B2C /* SPKUser+CoreDataClass.m in Sources */,
 				F49954C41E80D498001F0B2C /* SPKMoveBandStore.m in Sources */,
+				F49015B31E8BC7FE001E097C /* SPKDay+CoreDataClass.m in Sources */,
 				F49954B21E80D3A1001F0B2C /* ViewController.m in Sources */,
+				F49015B41E8BC7FE001E097C /* SPKDay+CoreDataProperties.m in Sources */,
 				F490154D1E8A62F0001E097C /* SPKPackets+CoreDataClass.m in Sources */,
 				F490154E1E8A62F0001E097C /* SPKPackets+CoreDataProperties.m in Sources */,
 				F49954AF1E80D3A1001F0B2C /* AppDelegate.m in Sources */,
@@ -391,6 +404,7 @@
 		F49954C81E8116F1001F0B2C /* MoveBand.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F49015AA1E8BC702001E097C /* MoveBand 9.xcdatamodel */,
 				F49015711E8BB2A0001E097C /* MoveBand 8.xcdatamodel */,
 				F49015631E8BAABA001E097C /* MoveBand 7.xcdatamodel */,
 				F490153D1E8A6101001E097C /* MoveBand 6.xcdatamodel */,
@@ -400,7 +414,7 @@
 				F45A7AF01E825C0100E699A3 /* MoveBand 2.xcdatamodel */,
 				F49954C91E8116F1001F0B2C /* MoveBand.xcdatamodel */,
 			);
-			currentVersion = F49015711E8BB2A0001E097C /* MoveBand 8.xcdatamodel */;
+			currentVersion = F49015AA1E8BC702001E097C /* MoveBand 9.xcdatamodel */;
 			path = MoveBand.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

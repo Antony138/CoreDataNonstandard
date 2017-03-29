@@ -41,5 +41,6 @@
 @dynamic userPhotoMD5Value;
 @dynamic userWeight;
 @dynamic allPackets;
+@dynamic allDays;
 
 @end

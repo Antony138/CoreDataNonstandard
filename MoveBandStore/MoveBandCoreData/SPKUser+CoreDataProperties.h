@@ -8,6 +8,7 @@
 
 #import "SPKUser+CoreDataClass.h"
 #import "SPKPackets+CoreDataClass.h"
+#import "SPKDay+CoreDataClass.h"
 #import "SPKPublic.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -43,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *userPhotoMD5Value;
 @property (nonatomic) int16_t userWeight;
 @property (nullable, nonatomic, retain) NSOrderedSet<SPKPackets *> *allPackets;
+@property (nullable, nonatomic, retain) NSOrderedSet<SPKDay *> *allDays;
 
 @end
 
@@ -58,6 +60,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllPacketsObject:(SPKPackets *)value;
 - (void)addAllPackets:(NSOrderedSet<SPKPackets *> *)values;
 - (void)removeAllPackets:(NSOrderedSet<SPKPackets *> *)values;
+
+- (void)insertObject:(SPKDay *)value inAllDaysAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromAllDaysAtIndex:(NSUInteger)idx;
+- (void)insertAllDays:(NSArray<SPKDay *> *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeAllDaysAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInAllDaysAtIndex:(NSUInteger)idx withObject:(SPKDay *)value;
+- (void)replaceAllDaysAtIndexes:(NSIndexSet *)indexes withAllDays:(NSArray<SPKDay *> *)values;
+- (void)addAllDaysObject:(SPKDay *)value;
+- (void)removeAllDaysObject:(SPKDay *)value;
+- (void)addAllDays:(NSOrderedSet<SPKDay *> *)values;
+- (void)removeAllDays:(NSOrderedSet<SPKDay *> *)values;
 
 @end
 

@@ -12,11 +12,13 @@
 
 #endif /* SPKPublic_h */
 
-static NSString *kUserEntityName = @"SPKUser";
+static NSString *kUserEntityName   = @"SPKUser";
 
-static NSString *kUserNameKey = @"userName";
+static NSString *kUserNameKey      = @"userName";
 
 static NSString *kPacketEntityName = @"SPKPackets";
+
+static NSString *kDayEntityName    = @"SPKDay";
 
 // 性别
 typedef NS_ENUM (int16_t, UserGenderType) {

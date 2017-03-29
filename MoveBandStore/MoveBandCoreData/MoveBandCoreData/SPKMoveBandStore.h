@@ -30,6 +30,18 @@
             duration:(int32_t)duration
     isUploadedServer:(BOOL)isUploadedServer;
 
+- (void)addDayFor:(SPKUser *)user
+withStartTimeStamp:(int64_t)startTimeStamp
+     endTimeStamp:(int64_t)endTimeStamp
+            steps:(int64_t)steps
+         calories:(int64_t)calories
+         distance:(int64_t)distance
+         duration:(int64_t)duration
+deepSleepDuration:(int64_t)deepSleepDuration
+lightSleepDuration:(int64_t)lightSleepDuration
+    awakeDuration:(int64_t)awakeDuration
+ isCalculateSleep:(BOOL)isCalculateSleep;
+
 - (void)removeUser:(SPKUser *)user;
 
 - (void)save;

@@ -50,6 +50,10 @@
         NSLog(@"index: %@; time:%@", @(packet.index), @(timeStamp));
     }
     _emailTextField.text  = [NSString stringWithFormat:@"步数: %@; 卡路里: %@; Time: %@, 最后一包的索引: %@", @(stepCount), @(caloriesCount), @(timeStamp), @(index)];
+    
+    for (SPKDay *day in _selectedUser.allDays) {
+        NSLog(@"day: starTime:%@; setep:%@; cal:%@; du:%@", @(day.startTimeStamp), @(day.steps), @(day.calories), @(day.duration));
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
