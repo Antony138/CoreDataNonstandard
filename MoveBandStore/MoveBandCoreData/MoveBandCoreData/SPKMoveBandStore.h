@@ -15,8 +15,20 @@
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
 // 这里返回SPKUser, 是为了传递给其他页面, 以便进行赋值
-// pass SPKUser to other controllers for assign value
+// return SPKUser to other controllers for assign value
 - (SPKUser *)addNewUser;
+
+// 利用NSEntityDescription的insert方法添加一个历史数据包(到对应的User中)
+- (void)addPacketFor:(SPKUser *)user
+           withIndex:(int64_t)index
+      startTimeStamp:(int32_t)startTimeStamp
+        endTimeStamp:(int32_t)endTimeStamp
+               steps:(int32_t)steps
+            calories:(int32_t)calories
+            distance:(int32_t)distance
+               sleep:(int32_t)sleep
+            duration:(int32_t)duration
+    isUploadedServer:(BOOL)isUploadedServer;
 
 - (void)removeUser:(SPKUser *)user;
 

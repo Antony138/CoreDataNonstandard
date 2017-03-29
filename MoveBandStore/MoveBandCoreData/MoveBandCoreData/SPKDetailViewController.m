@@ -23,8 +23,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _nameTextField.text   = _selectedUser.userName;
+    
     _idTextField.text     = [NSString stringWithFormat:@"%@", @(_selectedUser.userID)];
+    
     _weightTextField.text = [NSString stringWithFormat:@"packet个数: %@", @(_selectedUser.allPackets.count)];
+    
     if (_selectedUser.userGender == UserGenderType_Male) {
         _heightTextField.text = @"Man";
     }
@@ -34,7 +37,17 @@
     else {
         _heightTextField.text = @"Unknow";
     }
-    _emailTextField.text  = _selectedUser.userEmailAccount;
+    
+    uint32_t stepCount = 0;
+    uint32_t caloriesCount = 0;
+    uint32_t timeStamp = 0;
+    for (SPKPackets *packet in _selectedUser.allPackets) {
+        stepCount += packet.steps;
+        caloriesCount += packet.calories;
+        timeStamp = packet.startTimeStamp;
+        NSLog(@"index: %@; time:%@", @(packet.index), @(timeStamp));
+    }
+    _emailTextField.text  = [NSString stringWithFormat:@"步数: %@; 卡路里: %@; Time: %@", @(stepCount), @(caloriesCount), @(timeStamp)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

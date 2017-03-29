@@ -72,16 +72,28 @@
     newUser.allHistoryDataPackets = [NSMutableArray arrayWithObjects:@"123", @"234", @"456", nil];
     
     for (int i = 0; i < 5; i++) {
-        SPKPackets *packet = [NSEntityDescription insertNewObjectForEntityForName:kPacketEntityName inManagedObjectContext:_context];
-        packet.steps = 99 + i;
-        packet.calories = 555 + i;
-
-        [newUser addAllPacketsObject:packet];
+        [self addPacketFor:newUser withIndex:i startTimeStamp:[[NSDate date] timeIntervalSince1970] endTimeStamp:[[NSDate date] timeIntervalSince1970] + 300 steps:99 +i calories:100 + i distance:101 + i sleep:102 +i duration:103 + i isUploadedServer:NO];
     }
     
 //    [self save];
     
     return newUser;
+}
+
+- (void)addPacketFor:(SPKUser *)user withIndex:(int64_t)index startTimeStamp:(int32_t)startTimeStamp endTimeStamp:(int32_t)endTimeStamp steps:(int32_t)steps calories:(int32_t)calories distance:(int32_t)distance sleep:(int32_t)sleep duration:(int32_t)duration isUploadedServer:(BOOL)isUploadedServer {
+    
+    SPKPackets *newPacket = [NSEntityDescription insertNewObjectForEntityForName:kPacketEntityName inManagedObjectContext:_context];
+    newPacket.index = index;
+    newPacket.startTimeStamp = startTimeStamp;
+    newPacket.endTimeStamp = endTimeStamp;
+    newPacket.steps = steps;
+    newPacket.calories = calories;
+    newPacket.distance = distance;
+    newPacket.sleep = sleep;
+    newPacket.duration = duration;
+    newPacket.isUploadedServer = isUploadedServer;
+    
+    [user addAllPacketsObject:newPacket];
 }
 
 - (void)removeUser:(SPKUser *)user {
