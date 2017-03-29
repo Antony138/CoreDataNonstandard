@@ -41,13 +41,15 @@
     uint32_t stepCount = 0;
     uint32_t caloriesCount = 0;
     uint32_t timeStamp = 0;
+    uint64_t index = 0;
     for (SPKPackets *packet in _selectedUser.allPackets) {
         stepCount += packet.steps;
         caloriesCount += packet.calories;
         timeStamp = packet.startTimeStamp;
+        index = packet.index;
         NSLog(@"index: %@; time:%@", @(packet.index), @(timeStamp));
     }
-    _emailTextField.text  = [NSString stringWithFormat:@"步数: %@; 卡路里: %@; Time: %@", @(stepCount), @(caloriesCount), @(timeStamp)];
+    _emailTextField.text  = [NSString stringWithFormat:@"步数: %@; 卡路里: %@; Time: %@, 最后一包的索引: %@", @(stepCount), @(caloriesCount), @(timeStamp), @(index)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
