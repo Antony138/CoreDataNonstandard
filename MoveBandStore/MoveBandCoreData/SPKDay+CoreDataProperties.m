@@ -2,7 +2,7 @@
 //  SPKDay+CoreDataProperties.m
 //  MoveBandCoreData
 //
-//  Created by SPK_Antony on 29/03/2017.
+//  Created by SPK_Antony on 30/03/2017.
 //  Copyright © 2017 Spark Technology Inc. All rights reserved.
 //
 
@@ -14,15 +14,16 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"SPKDay"];
 }
 
-@dynamic startTimeStamp;
-@dynamic steps;
-@dynamic endTimeStamp;
+@dynamic awakeDuration;
 @dynamic calories;
+@dynamic deepSleepDuration;
 @dynamic distance;
 @dynamic duration;
-@dynamic deepSleepDuration;
-@dynamic lightSleepDuration;
-@dynamic awakeDuration;
+@dynamic endTimeStamp;
 @dynamic isCalculateSleep;
+@dynamic lightSleepDuration;
+@dynamic startTimeStamp;
+@dynamic steps;
+@dynamic hours;
 
 @end

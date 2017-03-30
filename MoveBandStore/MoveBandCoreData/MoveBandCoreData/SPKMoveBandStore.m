@@ -52,6 +52,7 @@
     // Create persistent store
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
+        // 用于支持版本迁移的参数
         NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                                  [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
                                  [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
@@ -117,6 +118,12 @@
     newDay.isCalculateSleep = isCalculateSleep;
     
     [user addAllDaysObject:newDay];
+}
+
+- (void)add24Hours {
+    
+    
+    
 }
 
 - (void)removeUser:(SPKUser *)user {
