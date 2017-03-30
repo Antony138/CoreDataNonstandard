@@ -2,13 +2,13 @@
 //  SPKUser+CoreDataProperties.h
 //  MoveBandCoreData
 //
-//  Created by SPK_Antony on 29/03/2017.
+//  Created by SPK_Antony on 30/03/2017.
 //  Copyright © 2017 Spark Technology Inc. All rights reserved.
 //
 
 #import "SPKUser+CoreDataClass.h"
 #import "SPKPackets+CoreDataClass.h"
-#import "SPKDay+CoreDataClass.h"
+#import "SPKMonth+CoreDataClass.h"
 #import "SPKPublic.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *userPhotoMD5Value;
 @property (nonatomic) int16_t userWeight;
 @property (nullable, nonatomic, retain) NSOrderedSet<SPKPackets *> *allPackets;
-@property (nullable, nonatomic, retain) NSOrderedSet<SPKDay *> *allDays;
+@property (nullable, nonatomic, retain) NSOrderedSet<SPKMonth *> *months;
 
 @end
 
@@ -61,16 +61,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addAllPackets:(NSOrderedSet<SPKPackets *> *)values;
 - (void)removeAllPackets:(NSOrderedSet<SPKPackets *> *)values;
 
-- (void)insertObject:(SPKDay *)value inAllDaysAtIndex:(NSUInteger)idx;
-- (void)removeObjectFromAllDaysAtIndex:(NSUInteger)idx;
-- (void)insertAllDays:(NSArray<SPKDay *> *)value atIndexes:(NSIndexSet *)indexes;
-- (void)removeAllDaysAtIndexes:(NSIndexSet *)indexes;
-- (void)replaceObjectInAllDaysAtIndex:(NSUInteger)idx withObject:(SPKDay *)value;
-- (void)replaceAllDaysAtIndexes:(NSIndexSet *)indexes withAllDays:(NSArray<SPKDay *> *)values;
-- (void)addAllDaysObject:(SPKDay *)value;
-- (void)removeAllDaysObject:(SPKDay *)value;
-- (void)addAllDays:(NSOrderedSet<SPKDay *> *)values;
-- (void)removeAllDays:(NSOrderedSet<SPKDay *> *)values;
+- (void)insertObject:(SPKMonth *)value inMonthsAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromMonthsAtIndex:(NSUInteger)idx;
+- (void)insertMonths:(NSArray<SPKMonth *> *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeMonthsAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInMonthsAtIndex:(NSUInteger)idx withObject:(SPKMonth *)value;
+- (void)replaceMonthsAtIndexes:(NSIndexSet *)indexes withMonths:(NSArray<SPKMonth *> *)values;
+- (void)addMonthsObject:(SPKMonth *)value;
+- (void)removeMonthsObject:(SPKMonth *)value;
+- (void)addMonths:(NSOrderedSet<SPKMonth *> *)values;
+- (void)removeMonths:(NSOrderedSet<SPKMonth *> *)values;
 
 @end
 

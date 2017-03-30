@@ -15,14 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<SPKHour *> *)fetchRequest;
 
-@property (nonatomic) int64_t startTimeStamp;
-@property (nonatomic) int64_t endTimeStamp;
-@property (nonatomic) int64_t steps;
 @property (nonatomic) int64_t calories;
 @property (nonatomic) int64_t distance;
 @property (nonatomic) int64_t duration;
+@property (nonatomic) int64_t endTimeStamp;
 @property (nonatomic) BOOL isPast;
 @property (nonatomic) BOOL isUploadedServer;
+@property (nonatomic) int64_t startTimeStamp;
+@property (nonatomic) int64_t steps;
 
 @end
 

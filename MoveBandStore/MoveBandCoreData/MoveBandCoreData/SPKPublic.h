@@ -18,6 +18,8 @@ static NSString *kUserNameKey      = @"userName";
 
 static NSString *kPacketEntityName = @"SPKPackets";
 
+static NSString *kMonthEntityName    = @"SPKMonth";
+
 static NSString *kDayEntityName    = @"SPKDay";
 
 static NSString *kHourEntityName   = @"SPKHour";

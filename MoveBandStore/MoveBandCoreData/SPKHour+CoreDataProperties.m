@@ -14,13 +14,13 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"SPKHour"];
 }
 
-@dynamic startTimeStamp;
-@dynamic endTimeStamp;
-@dynamic steps;
 @dynamic calories;
 @dynamic distance;
 @dynamic duration;
+@dynamic endTimeStamp;
 @dynamic isPast;
 @dynamic isUploadedServer;
+@dynamic startTimeStamp;
+@dynamic steps;
 
 @end

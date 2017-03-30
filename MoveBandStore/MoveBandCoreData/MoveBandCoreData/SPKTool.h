@@ -22,4 +22,6 @@
 
 + (NSInteger)getEndTimeStampForMonth:(NSInteger)monthIndex;
 
++ (NSInteger)getDaysAmonutInMonthStartTimeStamp:(NSInteger)startTimeStamp;
+
 @end

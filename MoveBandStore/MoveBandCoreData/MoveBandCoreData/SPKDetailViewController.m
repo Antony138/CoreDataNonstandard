@@ -8,6 +8,7 @@
 
 #import "SPKDetailViewController.h"
 #import "SPKUser+CoreDataClass.h"
+#import "SPKDay+CoreDataClass.h"
 
 @interface SPKDetailViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -50,14 +51,22 @@
         NSLog(@"index: %@; time:%@", @(packet.index), @(timeStamp));
     }
     _emailTextField.text  = [NSString stringWithFormat:@"步数: %@; 卡路里: %@; Time: %@, 最后一包的索引: %@", @(stepCount), @(caloriesCount), @(timeStamp), @(index)];
-    
-    for (SPKDay *day in _selectedUser.allDays) {
-        NSLog(@"day: starTime:%@; setep:%@; cal:%@; du:%@", @(day.startTimeStamp), @(day.steps), @(day.calories), @(day.duration));
-        
-        for (SPKHour *hour in day.hours) {
-            NSLog(@"HourStart: %@; End: %@", @(hour.startTimeStamp), @(hour.endTimeStamp));
+
+    /*
+    for (SPKMonth *month in _selectedUser.months) {
+        NSLog(@"moth %@ 的开始时间戳是: %@, 有: %@天", @([_selectedUser.months indexOfObject:month]), @(month.startTimeStamp), @(month.days.count));
+
+        for (SPKDay *day in month.days) {
+            NSInteger dayIndex = [month.days indexOfObject:day];
+            NSLog(@"moth %@ 的第 %@ 天, 有 %@ 小时", @([_selectedUser.months indexOfObject:month]), @(dayIndex), @(day.hours.count));
+            
+            for (SPKHour *hour in day.hours) {
+                
+                NSLog(@"hour %@的开始时间戳: %@", @([day.hours indexOfObject:hour]), @(hour.startTimeStamp));
+            }
         }
     }
+    */
 }
 
 - (void)viewWillDisappear:(BOOL)animated

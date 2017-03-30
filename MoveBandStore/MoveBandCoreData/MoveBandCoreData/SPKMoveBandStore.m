@@ -78,8 +78,11 @@
         [self addPacketFor:newUser withIndex:i startTimeStamp:[[NSDate date] timeIntervalSince1970] endTimeStamp:[[NSDate date] timeIntervalSince1970] + 300 steps:99 +i calories:100 + i distance:101 + i sleep:102 +i duration:103 + i isUploadedServer:NO];
     }
     
-    for (int i = 0; i < 2; i++) {
-        [self addDayFor:newUser withStartTimeStamp:[SPKTool getTodayStartTimeStamp] + i * kSecondsPerDay endTimeStamp:[SPKTool getTodayEndTimeStamp] + i * kSecondsPerDay steps:999 calories:999 distance:999 duration:999 deepSleepDuration:999 lightSleepDuration:999 awakeDuration:999 isCalculateSleep:NO];
+    // 创建12个月
+    // 0 ~ 11:表示创建当月起始的未来12个月
+    // 0 ~ -11:表示创建当月起始的前12个月
+    for (int i = 0; i > -12; i--) {
+        [self addMonthFor:newUser withStartTimeStamp:[SPKTool getStartTimeStampForMonth:i] endTimeStamp:[SPKTool getEndTimeStampForMonth:i] steps:999 calories:999 distance:999 duration:999 deepSleepDuration:999 lightSleepDuration:999 awakeDuration:999];
     }
     
 //    [self save];
@@ -103,7 +106,48 @@
     [user addAllPacketsObject:newPacket];
 }
 
-- (void)addDayFor:(SPKUser *)user withStartTimeStamp:(int64_t)startTimeStamp endTimeStamp:(int64_t)endTimeStamp steps:(int64_t)steps calories:(int64_t)calories distance:(int64_t)distance duration:(int64_t)duration deepSleepDuration:(int64_t)deepSleepDuration lightSleepDuration:(int64_t)lightSleepDuration awakeDuration:(int64_t)awakeDuration isCalculateSleep:(BOOL)isCalculateSleep {
+- (void)addMonthFor:(SPKUser *)user withStartTimeStamp:(int64_t)startTimeStamp endTimeStamp:(int64_t)endTimeStamp steps:(int64_t)steps calories:(int64_t)calories distance:(int64_t)distance duration:(int64_t)duration deepSleepDuration:(int64_t)deepSleepDuration lightSleepDuration:(int64_t)lightSleepDuration awakeDuration:(int64_t)awakeDuration {
+
+    SPKMonth * newMonth = [NSEntityDescription insertNewObjectForEntityForName:kMonthEntityName inManagedObjectContext:_context];
+    
+    newMonth.startTimeStamp = startTimeStamp;
+    newMonth.endTimeStamp = endTimeStamp;
+    newMonth.steps = steps;
+    newMonth.calories = calories;
+    newMonth.distance = distance;
+    newMonth.duration = duration;
+    newMonth.deepSleepDuration = deepSleepDuration;
+    newMonth.lightSleepDuration = lightSleepDuration;
+    newMonth.awakeDuration = awakeDuration;
+    
+    [self addAllDaysFor:newMonth];
+    
+    [user addMonthsObject:newMonth];
+}
+
+- (void)addAllDaysFor:(SPKMonth *)month {
+
+    NSInteger daysAmonut = [SPKTool getDaysAmonutInMonthStartTimeStamp:month.startTimeStamp];
+    
+    for (int i = 0; i < daysAmonut; i++) {
+        
+        NSInteger dayStartTimeStamp = month.startTimeStamp + i * kSecondsPerDay;
+        
+        [self addDayFor:month
+     withStartTimeStamp:dayStartTimeStamp
+           endTimeStamp:dayStartTimeStamp + kSecondsPerDay
+                  steps:0
+               calories:0
+               distance:0
+               duration:0
+      deepSleepDuration:0
+     lightSleepDuration:0
+          awakeDuration:0
+       isCalculateSleep:NO];
+    }
+}
+
+- (void)addDayFor:(SPKMonth *)month withStartTimeStamp:(int64_t)startTimeStamp endTimeStamp:(int64_t)endTimeStamp steps:(int64_t)steps calories:(int64_t)calories distance:(int64_t)distance duration:(int64_t)duration deepSleepDuration:(int64_t)deepSleepDuration lightSleepDuration:(int64_t)lightSleepDuration awakeDuration:(int64_t)awakeDuration isCalculateSleep:(BOOL)isCalculateSleep {
     
     SPKDay *newDay = [NSEntityDescription insertNewObjectForEntityForName:kDayEntityName inManagedObjectContext:_context];
     
@@ -120,15 +164,15 @@
     
     [self add24HoursFor:newDay];
     
-    [user addAllDaysObject:newDay];
+    [month addDaysObject:newDay];
 }
 
 - (void)add24HoursFor:(SPKDay *)day {
     for (int i = 0; i < 24; i++) {
         SPKHour *hour = [NSEntityDescription insertNewObjectForEntityForName:kHourEntityName inManagedObjectContext:_context];
         
-        hour.startTimeStamp = day.startTimeStamp + i * 3600;
-        hour.endTimeStamp = hour.startTimeStamp + 3600;
+        hour.startTimeStamp = day.startTimeStamp + i * kSecondsPerHour;
+        hour.endTimeStamp = hour.startTimeStamp + kSecondsPerHour;
         hour.steps = 999;
         
         [day addHoursObject:hour];

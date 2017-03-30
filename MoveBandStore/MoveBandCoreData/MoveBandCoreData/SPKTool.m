@@ -158,4 +158,13 @@
     return [endDateOfTheMonth timeIntervalSince1970];
 }
 
++ (NSInteger)getDaysAmonutInMonthStartTimeStamp:(NSInteger)startTimeStamp {
+    
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSRange daysRange = [gregorian rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:[NSDate dateWithTimeIntervalSince1970:startTimeStamp]];
+    NSUInteger daysAmonut = daysRange.length;
+    
+    return daysAmonut;
+}
+
 @end
