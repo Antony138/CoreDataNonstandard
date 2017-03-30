@@ -173,6 +173,8 @@
         
         hour.startTimeStamp = day.startTimeStamp + i * kSecondsPerHour;
         hour.endTimeStamp = hour.startTimeStamp + kSecondsPerHour;
+        
+        // TODO:是否要在这里遍历数据包,把属于这个时间段(小时)的数据加入SPKHour中?
         hour.steps = 999;
         
         [day addHoursObject:hour];
