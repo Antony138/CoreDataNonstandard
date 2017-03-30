@@ -53,6 +53,10 @@
     
     for (SPKDay *day in _selectedUser.allDays) {
         NSLog(@"day: starTime:%@; setep:%@; cal:%@; du:%@", @(day.startTimeStamp), @(day.steps), @(day.calories), @(day.duration));
+        
+        for (SPKHour *hour in day.hours) {
+            NSLog(@"HourStart: %@; End: %@", @(hour.startTimeStamp), @(hour.endTimeStamp));
+        }
     }
 }
 

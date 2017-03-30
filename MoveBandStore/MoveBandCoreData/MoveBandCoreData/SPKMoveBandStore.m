@@ -11,6 +11,7 @@
 #import "SPKPublic.h"
 #import "SPKPackets+CoreDataClass.h"
 #import "SPKDay+CoreDataClass.h"
+#import "SPKTool.h"
 
 @interface SPKMoveBandStore ()
 
@@ -77,8 +78,8 @@
         [self addPacketFor:newUser withIndex:i startTimeStamp:[[NSDate date] timeIntervalSince1970] endTimeStamp:[[NSDate date] timeIntervalSince1970] + 300 steps:99 +i calories:100 + i distance:101 + i sleep:102 +i duration:103 + i isUploadedServer:NO];
     }
     
-    for (int i = 0; i < 5; i++) {
-        [self addDayFor:newUser withStartTimeStamp:[[NSDate date] timeIntervalSince1970] endTimeStamp:[[NSDate date] timeIntervalSince1970] + 86400 steps:999 calories:999 distance:999 duration:999 deepSleepDuration:999 lightSleepDuration:999 awakeDuration:999 isCalculateSleep:NO];
+    for (int i = 0; i < 2; i++) {
+        [self addDayFor:newUser withStartTimeStamp:[SPKTool getTodayStartTimeStamp] + i * kSecondsPerDay endTimeStamp:[SPKTool getTodayEndTimeStamp] + i * kSecondsPerDay steps:999 calories:999 distance:999 duration:999 deepSleepDuration:999 lightSleepDuration:999 awakeDuration:999 isCalculateSleep:NO];
     }
     
 //    [self save];
@@ -117,13 +118,21 @@
     newDay.awakeDuration = awakeDuration;
     newDay.isCalculateSleep = isCalculateSleep;
     
+    [self add24HoursFor:newDay];
+    
     [user addAllDaysObject:newDay];
 }
 
-- (void)add24Hours {
-    
-    
-    
+- (void)add24HoursFor:(SPKDay *)day {
+    for (int i = 0; i < 24; i++) {
+        SPKHour *hour = [NSEntityDescription insertNewObjectForEntityForName:kHourEntityName inManagedObjectContext:_context];
+        
+        hour.startTimeStamp = day.startTimeStamp + i * 3600;
+        hour.endTimeStamp = hour.startTimeStamp + 3600;
+        hour.steps = 999;
+        
+        [day addHoursObject:hour];
+    }
 }
 
 - (void)removeUser:(SPKUser *)user {
