@@ -13,4 +13,13 @@
 + (NSInteger)getTodayStartTimeStamp;
 
 + (NSInteger)getTodayEndTimeStamp;
+
++ (NSInteger)getCurrentWeekStartTimeStamp;
+
++ (NSInteger)getCurrentWeekEndTimeStamp;
+
++ (NSInteger)getStartTimeStampForMonth:(NSInteger)monthIndex;
+
++ (NSInteger)getEndTimeStampForMonth:(NSInteger)monthIndex;
+
 @end
